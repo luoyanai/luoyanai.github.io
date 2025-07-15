@@ -1141,7 +1141,7 @@ footer {
 @media(max-width:1080px) {
 	
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
     .image_margin {
       display: flex;
       justify-content: flex-start;
@@ -1152,7 +1152,7 @@ footer {
     }
   }
   
-  @media (max-width: 767.98px) {
+  @media (max-width: 1000px) {
     .image_margin {
       display: flex;
       justify-content: center;

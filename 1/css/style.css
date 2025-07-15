@@ -1141,18 +1141,19 @@ footer {
 @media(max-width:1080px) {
 	
 }
-/* 桌面端：图片整体右移100px */
+@media(max-width:1080px) {
+	
+}
 @media (min-width: 768px) {
-  .image_margin {
-    padding-left: 100px;
+    .image_margin {
+      padding-left: 100px;
+    }
   }
-}
-
-/* 手机端：图片居中 */
-@media (max-width: 767.98px) {
-  .image_margin {
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
+  
+  @media (max-width: 767.98px) {
+    .image_margin {
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+    }
   }
-}

@@ -1141,19 +1141,23 @@ footer {
 @media(max-width:1080px) {
 	
 }
-@media(max-width:1080px) {
-	
-}
 @media (min-width: 768px) {
     .image_margin {
-      padding-left: 100px;
+      display: flex;
+      justify-content: flex-start;
+      /* 保证是左对齐 */
+    }
+    .image_margin img {
+      margin-left: 100px;
     }
   }
   
   @media (max-width: 767.98px) {
     .image_margin {
-      padding-left: 0;
       display: flex;
       justify-content: center;
+    }
+    .image_margin img {
+      margin-left: 0;
     }
   }

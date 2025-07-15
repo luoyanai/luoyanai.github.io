@@ -2724,3 +2724,24 @@ readers do not read off random characters that represent icons */
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
+
+.honor-icon {
+  background-color: #f5f5f5;
+  padding: 12px;
+  border-radius: 50%;
+  color: #2c3e50;
+  font-size: 22px;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 24px;
+  display: inline-block;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.honor-icon:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+  

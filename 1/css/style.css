@@ -1161,9 +1161,3 @@ footer {
       margin-left: 0;
     }
   }
-  .about-grids > div:not(:first-child) {
-    margin-left: 30px;
-  }
-  .about-grids > div:not(:last-child) {
-    margin-right: 30px;
-  }

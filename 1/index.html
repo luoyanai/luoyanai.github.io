@@ -34,6 +34,9 @@
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 	<!--//web font-->
 
+	<!-- AOS Animation Library -->
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 
 </head>
 
@@ -232,56 +235,57 @@
 <!-- //honors -->
 
 <!-- experience -->
-<section class="experience py-5" id="experience">
+<section class="experience py-5" id="experience" data-aos="fade-up">
 	<div class="container py-3">
 		<h3 class="heading">Experience</h3>
 
 		<!-- 项目 1 -->
 		<div class="row exp-grids">
-			<div class="col-md-3 exp wthree">
-				<h4>Robotic Embodiment Learning</h4>
-				<h5>2022 - Present</h5>
+			<div class="col-md-3 exp wthree" data-aos="fade-right">
+				<h4>Embodied Intelligence Research</h4>
+				<h5>2022 – Present</h5>
 			</div>
-			<div class="col-md-9 mt-md-0 mt-4 wthree">
-				<p>Led research on intelligent manipulation and grasping using a semi-humanoid robotic platform. Designed a language-vision-motion integration pipeline, enabling teleoperation-driven data acquisition and reinforcement learning-based policy training for embodied control tasks.</p>
+			<div class="col-md-9 mt-md-0 mt-4 wthree" data-aos="fade-right">
+				<p>Led the development of a semi-humanoid manipulation system that integrates vision-language grounding and motor policy learning. Designed a closed-loop framework combining teleoperation, multimodal representation, and deep reinforcement learning for autonomous skill acquisition.</p>
 			</div>
 		</div>
 
 		<!-- 项目 2 -->
-		<div class="row exp-grid1 mt-5 wthree">
+		<div class="row exp-grid1 mt-5 wthree" data-aos="fade-left">
 			<div class="col-md-9 mb-md-0 mb-4">
-				<p>Served as the technical lead for two Jiangsu Provincial Programs, focusing on dynamic balance control algorithms for humanoid robots. Developed and validated real-time control strategies for terrain-adaptive locomotion and coordinated whole-body stability in dynamic environments.</p>
+				<p>Directed two provincial-level R&D programs focused on humanoid locomotion and balance control. Proposed a DCM-based dynamic stability algorithm under time-varying terrain disturbances, enabling whole-body coordinated control for complex mobile manipulation tasks.</p>
 			</div>
-			<div class="col-md-3 exp1 wthree">
-				<h4>Provincial R&D Projects</h4>
-				<h5>2021 - 2022</h5>
+			<div class="col-md-3 exp1 wthree" data-aos="fade-left">
+				<h4>Control Algorithm Lead</h4>
+				<h5>2021 – 2022</h5>
 			</div>
 		</div>
 
 		<!-- 项目 3 -->
-		<div class="row exp-grids mt-5 wthree">
+		<div class="row exp-grids mt-5 wthree" data-aos="fade-right">
 			<div class="col-md-3 exp">
-				<h4>3D Vision & Servo Control</h4>
-				<h5>2020 - 2021</h5>
+				<h4>3D Perception & Visual Servo</h4>
+				<h5>2020 – 2021</h5>
 			</div>
-			<div class="col-md-9 mt-md-0 mt-4 wthree">
-				<p>Participated in a project funded by the Science and Technology Development Program of Jilin Province. Focused on robot operation systems based on machine vision, developing algorithms for disordered object recognition, 3D pose estimation, and real-time visual servoing.</p>
+			<div class="col-md-9 mt-md-0 mt-4 wthree" data-aos="fade-right">
+				<p>Participated in a machine vision-driven robotic operation system project funded by Jilin Province. Focused on unstructured object manipulation, where I implemented 3D pose reconstruction, depth-based grasping, and low-latency visual servoing in cluttered scenes.</p>
 			</div>
 		</div>
 
 		<!-- 项目 4 -->
-		<div class="row exp-grid1 mt-5 wthree">
+		<div class="row exp-grid1 mt-5 wthree" data-aos="fade-left">
 			<div class="col-md-9 mb-md-0 mb-4">
-				<p>Contributed to national-level competitions including the Internet+ Innovation and Entrepreneurship Challenge and the Mathematical Modeling Competition. Responsibilities included quadruped robot control algorithm design, physical simulation, and optimization of dynamic models.</p>
+				<p>Secured top honors in national-level competitions, including the Internet+ Innovation Contest and Mathematical Modeling Challenge. Contributed to quadruped locomotion control, high-fidelity simulation, and dynamic optimization, demonstrating strong interdisciplinary and engineering capabilities.</p>
 			</div>
-			<div class="col-md-3 exp1 wthree">
-				<h4>Competition & Simulation</h4>
-				<h5>2019 - 2020</h5>
+			<div class="col-md-3 exp1 wthree" data-aos="fade-left">
+				<h4>Competitive Robotics & Modeling</h4>
+				<h5>2019 – 2020</h5>
 			</div>
 		</div>
 	</div>
 </section>
 <!-- //experience -->
+
 
 
 <!-- blog -->
@@ -576,6 +580,15 @@
 	</script>
 	<!-- //here ends scrolling icon -->
 	<!-- start-smoth-scrolling -->
+
+	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+	<script>
+	AOS.init({
+		duration: 800,       // 动画持续时间，单位 ms
+		once: true,          // 滚动一次后是否禁用动画
+		offset: 100          // 滚动距离多少时触发动画
+	});
+	</script>
 
 </body>
 </html>

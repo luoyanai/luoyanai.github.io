@@ -378,7 +378,7 @@
 		   </div>
 		   <div class="col-md-6 col-sm-12 mb-4">
 			  <div class="w3_agile_gallery_effect">
-				 <a href="images/g2.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+				 <a href="#" data-toggle="modal" data-target="#videoModal3">
 					<figure>
 					   <img src="images/g2.jpg" alt=" " />
 					</figure>
@@ -647,6 +647,30 @@
 <script>
   $('#videoModal2').on('hidden.bs.modal', function () {
     var video = document.getElementById('pickVideo');
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  });
+</script>
+
+<!-- 视频弹窗 Modal3 -->
+<div class="modal fade" id="videoModal3" tabindex="-1" role="dialog" aria-labelledby="videoModal3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body" style="padding:0;">
+        <video id="humanoidVideo" width="100%" height="auto" controls>
+          <source src="images/humanoid.mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('#videoModal3').on('hidden.bs.modal', function () {
+    var video = document.getElementById('humanoidVideo');
     if (video) {
       video.pause();
       video.currentTime = 0;

@@ -369,7 +369,7 @@
 		<div class="row gallery_grid-more project-grids w3ls">
 		   <div class="col-md-6 col-sm-12 mb-4">
 			  <div class="w3_agile_gallery_effect">
-				 <a href="images/g1.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+				 <a href="#" data-toggle="modal" data-target="#videoModal">
 					<figure>
 					   <img src="images/g1.jpg" alt=" " />
 					</figure>
@@ -605,6 +605,30 @@
 		offset: 100          // 滚动距离多少时触发动画
 	});
 	</script>
+
+	<!-- 视频弹窗 Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body" style="padding:0;">
+        <video id="bruceVideo" width="100%" height="auto" controls>
+          <source src="images/bruce.mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('#videoModal').on('hidden.bs.modal', function () {
+    var video = document.getElementById('bruceVideo');
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  });
+</script>
 
 </body>
 </html>

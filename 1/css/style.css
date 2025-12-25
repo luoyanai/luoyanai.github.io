@@ -1200,3 +1200,66 @@ footer {
 	margin: 0 8px;
 	color: rgba(255, 255, 255, 0.5);
 }
+
+/* ===== Banner Typography ===== */
+.banner .intro {
+	letter-spacing: 2px;
+	opacity: 0.9;
+}
+
+.banner .name {
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+.banner .position {
+	font-weight: 500;
+	margin-bottom: 15px;
+	opacity: 0.95;
+}
+
+.banner .summary {
+	max-width: 520px;
+	line-height: 1.7;
+	font-size: 15px;
+	color: rgba(255,255,255,0.92);
+}
+
+/* Academic highlight in banner */
+.academic-highlight {
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.academic-highlight .label {
+	font-weight: 600;
+	margin-right: 6px;
+}
+
+.academic-highlight .role {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.75);
+}
+
+.academic-highlight .divider {
+	margin: 0 8px;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/* CV button */
+.btn-cv {
+	display: inline-block;
+	margin-top: 18px;
+	padding: 10px 26px;
+	border: 2px solid #fff;
+	border-radius: 30px;
+	color: #fff;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+	background: #fff;
+	color: #000;
+	text-decoration: none;
+}

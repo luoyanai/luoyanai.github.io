@@ -1178,3 +1178,25 @@ footer {
 	font-size: 14px;
 	line-height: 1.6;
 }
+
+/* Banner academic highlight */
+.academic-highlight {
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.academic-highlight .label {
+	font-weight: 600;
+	margin-right: 6px;
+}
+
+.academic-highlight .role {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.75);
+	margin-left: 2px;
+}
+
+.academic-highlight .divider {
+	margin: 0 8px;
+	color: rgba(255, 255, 255, 0.5);
+}

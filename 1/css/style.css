@@ -1171,7 +1171,7 @@ footer {
 	font-size: 16px;
 	font-weight: 600;
 	margin-bottom: 10px;
-	color: #222;
+	color: #080808;
 }
 
 .supervisor-box p {
@@ -1262,4 +1262,21 @@ footer {
 	background: #fff;
 	color: #000;
 	text-decoration: none;
+}
+
+/* ===== Academic Supervision Highlight (Banner) ===== */
+
+.academic-highlight strong {
+	color: #ffffff;
+	font-weight: 700;
+}
+
+.academic-highlight .role {
+	color: #4da3ff;              /* 学术蓝 */
+	font-weight: 600;
+}
+
+.academic-highlight .label {
+	color: rgba(255,255,255,0.95);
+	font-weight: 600;
 }

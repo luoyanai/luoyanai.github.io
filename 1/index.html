@@ -728,7 +728,7 @@
 	</script>
 
 	<!-- 视频弹窗 Modal -->
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true" data-backdrop="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body" style="padding:0;">
@@ -744,7 +744,7 @@
 
 
 <!-- 视频弹窗 Modal2 -->
-<div class="modal fade" id="videoModal2" tabindex="-1" role="dialog" aria-labelledby="videoModal2Label" aria-hidden="true">
+<div class="modal fade" id="videoModal2" tabindex="-1" role="dialog" aria-labelledby="videoModal2Label" aria-hidden="true" data-backdrop="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body" style="padding:0;">
@@ -760,7 +760,7 @@
 
 
 <!-- 视频弹窗 Modal3 -->
-<div class="modal fade" id="videoModal3" tabindex="-1" role="dialog" aria-labelledby="videoModal3Label" aria-hidden="true">
+<div class="modal fade" id="videoModal3" tabindex="-1" role="dialog" aria-labelledby="videoModal3Label" aria-hidden="true" data-backdrop="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body" style="padding:0;">
@@ -774,14 +774,25 @@
 </div>
 
 <script>
-  $('.modal').on('hidden.bs.modal', function () {
-    const videos = $(this).find('video');
-    videos.each(function () {
-      this.pause();
-      this.currentTime = 0;
-    });
+  $(document).on('click', '.modal', function (e) {
+    if ($(e.target).hasClass('modal')) {
+      $(this).find('video').each(function () {
+        this.pause();
+        this.currentTime = 0;
+      });
+    }
+  });
+
+  $(document).on('keydown', function (e) {
+    if (e.key === "Escape") {
+      $('.modal video').each(function () {
+        this.pause();
+        this.currentTime = 0;
+      });
+    }
   });
 </script>
+
 
 
 </body>

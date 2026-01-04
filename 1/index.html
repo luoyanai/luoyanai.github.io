@@ -741,15 +741,7 @@
   </div>
 </div>
 
-<script>
-  $('#videoModal').on('hidden.bs.modal', function () {
-    var video = document.getElementById('bruceVideo');
-    if (video) {
-      video.pause();
-      video.currentTime = 0;
-    }
-  });
-</script>
+
 
 <!-- 视频弹窗 Modal2 -->
 <div class="modal fade" id="videoModal2" tabindex="-1" role="dialog" aria-labelledby="videoModal2Label" aria-hidden="true">
@@ -765,15 +757,7 @@
   </div>
 </div>
 
-<script>
-  $('#videoModal2').on('hidden.bs.modal', function () {
-    var video = document.getElementById('pickVideo');
-    if (video) {
-      video.pause();
-      video.currentTime = 0;
-    }
-  });
-</script>
+
 
 <!-- 视频弹窗 Modal3 -->
 <div class="modal fade" id="videoModal3" tabindex="-1" role="dialog" aria-labelledby="videoModal3Label" aria-hidden="true">
@@ -790,14 +774,15 @@
 </div>
 
 <script>
-  $('#videoModal3').on('hidden.bs.modal', function () {
-    var video = document.getElementById('humanoidVideo');
-    if (video) {
-      video.pause();
-      video.currentTime = 0;
-    }
+  $('.modal').on('hidden.bs.modal', function () {
+    const videos = $(this).find('video');
+    videos.each(function () {
+      this.pause();
+      this.currentTime = 0;
+    });
   });
 </script>
+
 
 </body>
 </html>

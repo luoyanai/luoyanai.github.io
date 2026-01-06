@@ -458,7 +458,7 @@
     <!-- 项目2 -->
     <div class="row align-items-center mb-5 flex-md-row-reverse">
       <div class="col-md-6 mb-3 mb-md-0">
-        <a href="#" data-toggle="modal" data-target="#videoModal3">
+        <a href="#" data-toggle="modal" data-target="#videoModal2">
           <img src="images/g2.jpg" alt="Humanoid Robot Locomotion" class="img-fluid rounded shadow" style="width:100%;max-width:570px;height:335px;object-fit:cover;">
         </a>
       </div>
@@ -474,7 +474,7 @@
     <!-- 项目3 -->
     <div class="row align-items-center mb-5">
       <div class="col-md-6 mb-3 mb-md-0">
-        <a href="#" data-toggle="modal" data-target="#videoModal2">
+        <a href="#" data-toggle="modal" data-target="#videoModal3">
           <img src="images/g3.jpg" alt="Vision-Language Manipulation" class="img-fluid rounded shadow" style="width:100%;max-width:570px;height:335px;object-fit:cover;">
         </a>
       </div>
@@ -490,8 +490,24 @@
     <!-- 项目4 -->
     <div class="row align-items-center mb-5 flex-md-row-reverse">
       <div class="col-md-6 mb-3 mb-md-0">
-        <a href="images/g4.jpg" data-lightbox="example-set" data-title="Quadruped Robot Simulation">
-          <img src="images/g4.jpg" alt="Quadruped Robot Simulation" class="img-fluid rounded shadow" style="width:100%;max-width:570px;height:335px;object-fit:cover;">
+        <a href="images/g4.jpg" data-lightbox="example-set" data-title="videoModal4">
+          <img src="images/g4.jpg" alt="Robot Simulation" class="img-fluid rounded shadow" style="width:100%;max-width:570px;height:335px;object-fit:cover;">
+        </a>
+      </div>
+      <div class="col-md-6">
+		<h4>Embodied AI Systems for Real-World Service and Industrial Robots</h4>
+		<p>
+		Focusing on embodied intelligence, this project develops robotic systems capable of operating in factories and everyday environments. 
+		Through simulation-to-real transfer, multimodal perception, and closed-loop interaction, robots achieve autonomous manipulation, scene understanding, and adaptive behavior in complex real-world settings.
+		</p>
+      </div>
+    </div>
+
+    <!-- 项目5 -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <a href="images/g5.jpg" data-lightbox="example-set" data-title="videoModal5">
+          <img src="images/g5.jpg" alt="Robot VLA" class="img-fluid rounded shadow" style="width:100%;max-width:570px;height:335px;object-fit:cover;">
         </a>
       </div>
       <div class="col-md-6">
@@ -752,8 +768,8 @@
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body" style="padding:0;">
-        <video id="pickVideo" width="100%" height="auto" controls>
-          <source src="images/pick.mp4" type="video/mp4">
+		<video id="humanoidVideo" width="100%" height="auto" controls>
+          <source src="images/humanoid.mp4" type="video/mp4">
           您的浏览器不支持 video 标签。
         </video>
       </div>
@@ -768,8 +784,36 @@
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body" style="padding:0;">
-        <video id="humanoidVideo" width="100%" height="auto" controls>
-          <source src="images/humanoid.mp4" type="video/mp4">
+        <video id="pickVideo" width="100%" height="auto" controls>
+          <source src="images/pick.mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 视频弹窗 Modal4 -->
+<div class="modal fade" id="videoModal4" tabindex="-1" role="dialog" aria-labelledby="videoModal4Label" aria-hidden="true" data-backdrop="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body" style="padding:0;">
+        <video id="sim" width="100%" height="auto" controls>
+          <source src="images/4.mp4" type="video/mp4">
+          您的浏览器不支持 video 标签。
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 视频弹窗 Modal5 -->
+<div class="modal fade" id="videoModal5" tabindex="-1" role="dialog" aria-labelledby="videoModal5Label" aria-hidden="true" data-backdrop="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body" style="padding:0;">
+        <video id="vla" width="100%" height="auto" controls>
+          <source src="images/5.mp4" type="video/mp4">
           您的浏览器不支持 video 标签。
         </video>
       </div>

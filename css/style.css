@@ -1280,3 +1280,15 @@ footer {
 	color: rgba(255,255,255,0.95);
 	font-weight: 600;
 }
+
+/* Recommendation section: force dark background */
+section.recommendation {
+  background: #000 !important;
+  color: #fff;
+}
+section.recommendation .heading,
+section.recommendation h5,
+section.recommendation .position,
+section.recommendation p {
+  color: #fff;
+}

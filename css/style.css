@@ -1281,14 +1281,23 @@ footer {
 	font-weight: 600;
 }
 
-/* Recommendation section: force dark background */
+/* Recommendation: match Honors(.services) background */
 section.recommendation {
-  background: #000 !important;
+  background: #191919;   /* same as .services */
   color: #fff;
 }
-section.recommendation .heading,
-section.recommendation h5,
-section.recommendation .position,
-section.recommendation p {
+
+/* Make the section heading style match services/blog (white heading + white underline) */
+section.recommendation h3.heading {
   color: #fff;
 }
+section.recommendation h3.heading:after {
+  background: #fff;
+}
+
+/* Text colors inside recommendation carousel */
+section.recommendation .test-review h5 { color: #fff; }
+section.recommendation .test-review p { color: #ccc; }  /* same as testimonials */
+section.recommendation .test-review .position { color: #ccc; }
+section.recommendation i.fa.fa-quote-right,
+section.recommendation i.fa.fa-quote-left { color: #fff; }

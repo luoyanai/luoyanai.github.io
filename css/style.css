@@ -1306,10 +1306,16 @@ section.recommendation i.fa.fa-quote-left { color: #fff; }
 	text-align: center;
 }
 
+.test-image {
+	text-align: center;
+}
+
 .test-image .letter-btn {
 	display: inline-block;
 	margin-top: 20px;
 	padding: 10px 20px;
+	min-width: 180px;
+	text-align: center;
 	background: #0d6efd;
 	color: #fff;
 	text-decoration: none;
@@ -1322,19 +1328,4 @@ section.recommendation i.fa.fa-quote-left { color: #fff; }
 .test-image .letter-btn:hover {
 	background: #0b5ed7;
 	color: #fff;
-}
-
-.test-image .letter-btn {
-	display: inline-block;
-	margin-top: 20px;
-	padding: 10px 20px;
-	min-width: 220px;
-	text-align: center;
-	background: #0d6efd;
-	color: #fff;
-	text-decoration: none;
-	border-radius: 6px;
-	font-size: 14px;
-	font-weight: 600;
-	transition: all 0.3s ease;
 }

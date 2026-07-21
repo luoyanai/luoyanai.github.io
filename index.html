@@ -107,25 +107,6 @@
 			</div>
 		</section>
 
-		<section class="snapshot-section">
-			<div class="container">
-				<div class="snapshot-grid">
-					<div class="snapshot-item">
-						<span class="snapshot-number">21.5</span>
-						<span class="snapshot-label">percentage-point success-rate gain over handcrafted reward baselines in MotionVL</span>
-					</div>
-					<div class="snapshot-item">
-						<span class="snapshot-number">22&deg;</span>
-						<span class="snapshot-label">inclination disturbance handled in dynamic humanoid walking experiments</span>
-					</div>
-					<div class="snapshot-item">
-						<span class="snapshot-number">5</span>
-						<span class="snapshot-label">representative real-robot and embodied AI systems with video demonstrations</span>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<section class="page-section" id="about">
 			<div class="container">
 				<div class="section-heading">
@@ -141,9 +122,10 @@
 							robotic platforms.
 						</p>
 						<p>
-							From dual-arm harvesting in occluded real-world scenes to language-guided humanoid locomotion,
-							my work emphasizes closed-loop evaluation, deployable control, and systems that can learn from
-							multimodal supervision rather than relying only on handcrafted rules.
+							From VLM-guided fruit picking-point localization in geometrically ambiguous scenes to
+							language-guided humanoid locomotion, my work emphasizes closed-loop evaluation, deployable
+							control, and systems that can learn from multimodal supervision rather than relying only on
+							handcrafted rules.
 						</p>
 					</div>
 					<div class="col-lg-5">
@@ -220,26 +202,28 @@
 
 				<div class="publication-list">
 					<article class="publication-item">
-						<a class="publication-media" href="#videoModal3" data-toggle="modal" data-target="#videoModal3" aria-label="Play CoPickVLM demonstration video">
-							<picture>
-								<source srcset="images/F4-1200.webp" type="image/webp">
-								<img src="images/F4.png" alt="CoPickVLM occlusion-aware tomato harvesting system overview" width="1200" height="762" decoding="async">
-							</picture>
+						<a class="publication-media" href="#videoModal3" data-toggle="modal" data-target="#videoModal3" aria-label="Play TOVEP demonstration video">
+							<img src="images/tovep-poster.jpg" alt="TOVEP visual-geometric evidence enhancement for VLM-guided fruit picking-point localization" width="640" height="480" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="publication-content">
-							<p class="pub-meta">Manuscript under revision, 2025</p>
-							<h3>CoPickVLM: A Vision-Language Model Guided Dual-Arm Collaborative System for Occlusion-Aware Tomato Harvesting</h3>
+							<p class="pub-meta">Manuscript under review, 2026</p>
+							<h3>TOVEP: Visual-Geometric Evidence Enhancement for VLM-Guided Fruit Picking-Point Localization</h3>
 							<p class="pub-authors"><strong>Luo Yan</strong> et al.</p>
 							<p>
-								An occlusion-aware tomato recognition and dual-arm collaborative harvesting system based
-								on vision-language reasoning. The system decomposes harvesting into semantic subtasks and
-								coordinates one arm for occlusion removal with another for cutting.
+								TOVEP enhances RGB-D evidence for VLM-guided picking-point localization by producing
+								an enhanced depth map, structural support map, and confidence map. A compact top-k
+								structural reference module guides the VLM toward likely fruit-stem attachment regions
+								and returns a structured picking record with point, approach orientation, confidence, and
+								supporting evidence.
 							</p>
+							<div class="publication-links">
+								<a href="#videoModal3" data-toggle="modal" data-target="#videoModal3"><i class="fas fa-video" aria-hidden="true"></i> Demo Video</a>
+							</div>
 							<div class="tag-row">
+								<span>RGB-D evidence enhancement</span>
 								<span>Vision-language model</span>
-								<span>Dual-arm manipulation</span>
-								<span>Agricultural robotics</span>
+								<span>Picking-point localization</span>
 							</div>
 						</div>
 					</article>
@@ -341,15 +325,15 @@
 					</article>
 
 					<article class="project-card">
-						<a class="project-media" href="#videoModal3" data-toggle="modal" data-target="#videoModal3" aria-label="Play occlusion-aware harvesting video">
-							<img src="images/g3.jpg" alt="Dual-arm occlusion-aware harvesting demo" width="570" height="335" decoding="async">
+						<a class="project-media" href="#videoModal3" data-toggle="modal" data-target="#videoModal3" aria-label="Play TOVEP fruit picking-point localization video">
+							<img src="images/tovep-poster.jpg" alt="TOVEP fruit picking-point localization demo" width="640" height="480" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="project-body">
-							<h3>Occlusion-Aware Dual-Arm Harvesting</h3>
+							<h3>TOVEP for VLM-Guided Fruit Picking-Point Localization</h3>
 							<p>
-								Vision-language reasoning for semantic task decomposition, occlusion identification,
-								2D-3D localization, and collaborative manipulation.
+								Visual-geometric evidence enhancement for fruit harvesting perception, using enhanced
+								depth, structural support, confidence cues, and candidate references to guide VLM decisions.
 							</p>
 						</div>
 					</article>
@@ -596,8 +580,8 @@
 		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-body">
-					<video id="pickVideo" width="100%" height="auto" controls preload="none" poster="images/g3.jpg" playsinline>
-						<source data-src="images/pick-optimized.mp4" type="video/mp4">
+					<video id="tovepVideo" width="100%" height="auto" controls preload="none" poster="images/tovep-poster.jpg" playsinline>
+						<source data-src="images/tovep-optimized.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>

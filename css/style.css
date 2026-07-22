@@ -271,7 +271,7 @@ h6 {
 	width: 100%;
 	height: 420px;
 	object-fit: cover;
-	object-position: center 68%;
+	object-position: center 60%;
 	background: var(--paper-strong);
 }
 
@@ -400,51 +400,6 @@ h6 {
 	background: var(--accent);
 }
 
-.research-grid {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 18px;
-}
-
-.research-card {
-	min-height: 250px;
-	padding: 24px;
-	background: var(--paper);
-	border: 1px solid var(--line);
-	border-radius: 8px;
-}
-
-.research-card i {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 38px;
-	height: 38px;
-	margin-bottom: 18px;
-	background: rgba(35, 135, 126, 0.1);
-	border-radius: 7px;
-	color: var(--accent-dark);
-}
-
-.research-card:nth-child(2) i {
-	background: rgba(69, 104, 166, 0.1);
-	color: var(--accent-blue);
-}
-
-.research-card:nth-child(3) i {
-	background: rgba(198, 129, 47, 0.12);
-	color: var(--accent-warm);
-}
-
-.research-card h3 {
-	font-size: 19px;
-	line-height: 1.35;
-	font-weight: 800;
-	margin-bottom: 12px;
-}
-
-.research-card p,
-.research-statement p,
 .publication-content p,
 .project-body p,
 .timeline-content p,
@@ -452,14 +407,6 @@ h6 {
 .contact-grid p {
 	color: var(--muted);
 	line-height: 1.72;
-}
-
-.research-statement {
-	margin-top: 24px;
-	padding: 24px 28px;
-	background: #fff;
-	border-left: 4px solid var(--accent);
-	border-radius: 8px;
 }
 
 .text-link {
@@ -823,7 +770,6 @@ h6 {
 		height: 420px;
 	}
 
-	.research-grid,
 	.project-grid,
 	.award-grid,
 	.letter-grid {
@@ -1003,7 +949,6 @@ h6 {
 	.publication-item,
 	.project-body,
 	.compact-panel,
-	.research-card,
 	.letter-card {
 		padding: 18px;
 	}

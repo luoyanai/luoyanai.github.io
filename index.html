@@ -44,7 +44,7 @@
 						<li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
 						<li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
 						<li class="nav-item"><a class="nav-link" href="#letters">Letters</a></li>
-						<li class="nav-item"><a class="nav-link nav-cta" href="files/resume-luoyan.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+						<li class="nav-item"><a class="nav-link nav-cta" href="files/Yan_Luo_Academic_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
 					</ul>
 				</div>
 			</div>
@@ -65,7 +65,7 @@
 							act, and improve through real-world interaction.
 						</p>
 						<div class="hero-actions">
-							<a class="btn-main" href="files/resume-luoyan.pdf" target="_blank" rel="noopener noreferrer">
+							<a class="btn-main" href="files/Yan_Luo_Academic_CV.pdf" target="_blank" rel="noopener noreferrer">
 								<i class="fas fa-download" aria-hidden="true"></i>
 								Download CV
 							</a>
@@ -155,7 +155,7 @@
 						<p class="section-kicker">Selected Work</p>
 						<h2>Publications and Manuscripts</h2>
 					</div>
-					<a class="text-link" href="files/resume-luoyan.pdf" target="_blank" rel="noopener noreferrer">Full CV <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+					<a class="text-link" href="files/Yan_Luo_Academic_CV.pdf" target="_blank" rel="noopener noreferrer">Full CV <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
 				</div>
 
 				<div class="publication-list">
@@ -279,73 +279,115 @@
 					<h2>Representative Systems and Demonstrations</h2>
 				</div>
 
-				<div class="project-grid">
-					<article class="project-card">
-						<a class="project-media" href="#videoModal" data-toggle="modal" data-target="#videoModal" aria-label="Play dynamic balance control video">
-							<img src="images/g1.jpg" alt="Humanoid robot dynamic balance control demo" width="570" height="335" decoding="async">
-							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
-						</a>
-						<div class="project-body">
-							<h3>Dynamic Balance Control of Humanoid Robots</h3>
+				<div class="project-list">
+					<article class="project-row">
+						<div class="project-video">
+							<video controls preload="metadata" playsinline aria-label="Outdoor humanoid fruit picking demonstration">
+								<source src="images/project videos/pick.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="project-copy">
+							<h3>Outdoor Humanoid Fruit Picking</h3>
 							<p>
-								DCM-based time-varying disturbance walking for humanoid robots under abrupt terrain changes,
-								including shaking-platform traversal up to 22&deg; inclination.
+								Field demo linking humanoid locomotion, visual target localization, and close-range
+								manipulation around tree canopies, moving perception-to-action work into outdoor clutter.
 							</p>
 						</div>
 					</article>
 
-					<article class="project-card">
-						<a class="project-media" href="#videoModal2" data-toggle="modal" data-target="#videoModal2" aria-label="Play humanoid motion control video">
-							<img src="images/g2.jpg" alt="Humanoid robot locomotion demo" width="570" height="335" decoding="async">
-							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
-						</a>
-						<div class="project-body">
-							<h3>Language-Guided Humanoid Motion Control</h3>
+					<article class="project-row">
+						<div class="project-video">
+							<video controls preload="metadata" playsinline aria-label="Real-world retail picking demonstration">
+								<source src="images/project videos/shoppick.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="project-copy">
+							<h3>Real-World Retail Picking</h3>
 							<p>
-								MotionVL integrates vision-language supervision and LLM-generated rewards to guide humanoid
-								reinforcement learning beyond handcrafted reward design.
+								Shop-floor demo for shelf-side reaching and item transfer, with target selection and
+								collision-aware motion around refrigerators, shelves, and counters.
 							</p>
 						</div>
 					</article>
 
-					<article class="project-card">
-						<a class="project-media" href="#videoModal3" data-toggle="modal" data-target="#videoModal3" aria-label="Play TOVEP fruit picking-point localization video">
-							<img src="images/tovep-poster.jpg" alt="TOVEP fruit picking-point localization demo" width="640" height="480" decoding="async">
-							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
-						</a>
-						<div class="project-body">
-							<h3>TOVEP for VLM-Guided Fruit Picking-Point Localization</h3>
+					<article class="project-row">
+						<div class="project-video">
+							<video controls preload="metadata" playsinline aria-label="Language-guided beverage serving demonstration">
+								<source src="images/project videos/sprite.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="project-copy">
+							<h3>Language-Guided Beverage Serving</h3>
 							<p>
-								Visual-geometric evidence enhancement for fruit harvesting perception, using enhanced
-								depth, structural support, confidence cues, and candidate references to guide VLM decisions.
+								Instruction-following manipulation that grounds a natural-language request, localizes
+								objects, and executes a sequential pouring task with precise end-effector control.
 							</p>
 						</div>
 					</article>
 
-					<article class="project-card">
-						<a class="project-media" href="#videoModal4" data-toggle="modal" data-target="#videoModal4" aria-label="Play embodied AI systems video">
-							<img src="images/g4.jpg" alt="Embodied AI systems demo" width="570" height="335" decoding="async">
-							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
-						</a>
-						<div class="project-body">
-							<h3>Embodied AI for Service and Industrial Robots</h3>
+					<article class="project-row">
+						<div class="project-video">
+							<video controls preload="metadata" playsinline aria-label="Whole-body humanoid teleoperation demonstration">
+								<source src="images/project videos/teleoperation.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="project-copy">
+							<h3>Whole-Body Humanoid Teleoperation</h3>
 							<p>
-								Simulation-to-real transfer, multimodal perception, and closed-loop interaction for robots
-								operating in factories and everyday environments.
+								VR teleoperation pipeline for collecting human demonstrations and transferring coordinated
+								upper-body and hand motions to a humanoid, supporting imitation-learning data collection.
 							</p>
 						</div>
 					</article>
 
-					<article class="project-card">
-						<a class="project-media" href="#videoModal5" data-toggle="modal" data-target="#videoModal5" aria-label="Play humanoid VLA manipulation video">
-							<img src="images/g5.jpg" alt="Humanoid vision-language-action manipulation demo" width="570" height="335" decoding="async">
-							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
-						</a>
-						<div class="project-body">
-							<h3>Teleoperation and VLA Humanoid Intelligence</h3>
+					<article class="project-row">
+						<div class="project-video">
+							<video controls preload="metadata" playsinline aria-label="Disturbance-resilient humanoid walking demonstration">
+								<source src="images/project videos/shakingboard.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="project-copy">
+							<h3>Disturbance-Resilient Humanoid Walking</h3>
 							<p>
-								A humanoid manipulation framework that combines teleoperation, vision-language reasoning,
-								action learning, instruction following, and fine motor control.
+								Shaking-platform validation for dynamic balance control, testing disturbance rejection,
+								foot placement, and body-state recovery under time-varying support surfaces.
+							</p>
+						</div>
+					</article>
+
+					<article class="project-row">
+						<div class="project-video">
+							<video controls preload="metadata" playsinline aria-label="Retail manipulation simulation demonstration">
+								<source src="images/project videos/shop.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="project-copy">
+							<h3>Retail Manipulation in Simulation</h3>
+							<p>
+								Convenience-store simulation for testing perception, target selection, grasp planning,
+								and placement policies before transferring embodied behaviors to real scenes.
+							</p>
+						</div>
+					</article>
+
+					<article class="project-row">
+						<div class="project-video">
+							<video controls preload="metadata" playsinline aria-label="Smart factory embodied robot demonstration">
+								<source src="images/project videos/factory.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+						<div class="project-copy">
+							<h3>Embodied Robots in Smart-Factory Workflows</h3>
+							<p>
+								Smart-factory scenario showing embodied robots as deployable agents that combine scene
+								understanding, task allocation, and multi-robot operation.
 							</p>
 						</div>
 					</article>
@@ -566,32 +608,6 @@
 				<div class="modal-body">
 					<video id="tovepVideo" width="100%" height="auto" controls preload="none" poster="images/tovep-poster.jpg" playsinline>
 						<source data-src="images/tovep-optimized.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="modal fade video-modal" id="videoModal4" tabindex="-1" role="dialog" aria-labelledby="videoModal4Label" aria-hidden="true" data-backdrop="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-body">
-					<video id="simVideo" width="100%" height="auto" controls preload="none" poster="images/g4.jpg" playsinline>
-						<source data-src="images/4-optimized.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="modal fade video-modal" id="videoModal5" tabindex="-1" role="dialog" aria-labelledby="videoModal5Label" aria-hidden="true" data-backdrop="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-body">
-					<video id="vlaVideo" width="100%" height="auto" controls preload="none" poster="images/g5.jpg" playsinline>
-						<source data-src="images/5-optimized.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>

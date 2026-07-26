@@ -590,34 +590,6 @@ h6 {
 	line-height: 1.58;
 }
 
-.project-actions {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
-	margin-top: 9px;
-}
-
-.project-launch {
-	display: inline-flex;
-	align-items: center;
-	gap: 6px;
-	min-height: 30px;
-	padding: 5px 9px;
-	border: 1px solid rgba(18, 118, 112, 0.28);
-	border-radius: 6px;
-	background: rgba(18, 118, 112, 0.08);
-	color: var(--accent-dark);
-	font-size: 12px;
-	font-weight: 800;
-}
-
-.project-launch:hover,
-.project-launch:focus {
-	border-color: var(--accent);
-	background: rgba(18, 118, 112, 0.14);
-	color: var(--accent-dark);
-}
-
 .timeline {
 	display: grid;
 	gap: 0;

@@ -33,65 +33,8 @@
 		});
 	});
 
-	var activeFilter = 'all';
-
-	function applyResearchFilter(button) {
-		if (!button) {
-			return;
-		}
-		activeFilter = button.getAttribute('data-research-filter');
-		document.querySelectorAll('[data-research-filter]').forEach(function (item) {
-			var selected = item === button;
-			item.classList.toggle('is-active', selected);
-			item.setAttribute('aria-pressed', String(selected));
-		});
-
-		var publicationCount = 0;
-		var projectCount = 0;
-		document.querySelectorAll('[data-research]').forEach(function (item) {
-			var topics = item.getAttribute('data-research').split(/\s+/);
-			var visible = activeFilter === 'all' || topics.indexOf(activeFilter) !== -1;
-			item.hidden = !visible;
-			item.classList.remove('filter-enter');
-			if (visible) {
-				void item.offsetWidth;
-				item.classList.add('filter-enter');
-			}
-			if (visible && item.classList.contains('publication-item')) {
-				publicationCount += 1;
-			}
-			if (visible && item.classList.contains('project-row')) {
-				projectCount += 1;
-			}
-		});
-
-		var label = button.querySelector('strong').textContent;
-		var status = document.getElementById('researchFilterStatus');
-		if (status) {
-			status.textContent = activeFilter === 'all'
-				? 'Showing all selected work.'
-				: 'Showing ' + publicationCount + ' publications and ' + projectCount + ' demonstrations for “' + label + '”.';
-		}
-	}
-
-	document.querySelectorAll('[data-research-filter]').forEach(function (button) {
-		button.addEventListener('click', function () {
-			applyResearchFilter(button);
-		});
-	});
-
-	document.querySelectorAll('[data-filter-target]').forEach(function (link) {
-		link.addEventListener('click', function (event) {
-			event.preventDefault();
-			var filter = link.getAttribute('data-filter-target');
-			var button = document.querySelector('[data-research-filter="' + filter + '"]');
-			applyResearchFilter(button);
-			document.getElementById('about').scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
-		});
-	});
-
 	if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-		var revealItems = document.querySelectorAll('.section-heading, .content-grid, .research-map, .publication-item, .timeline-item, .award-item, .letter-card, .contact-grid');
+		var revealItems = document.querySelectorAll('.section-heading, .content-grid, .publication-item, .timeline-item, .award-item, .letter-card, .contact-grid');
 		var revealObserver = new IntersectionObserver(function (entries, observer) {
 			entries.forEach(function (entry) {
 				if (entry.isIntersecting) {
@@ -127,7 +70,7 @@
 
 	document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 		link.addEventListener('click', function (event) {
-			if (link.hasAttribute('data-toggle') || link.hasAttribute('data-filter-target')) {
+			if (link.hasAttribute('data-toggle')) {
 				return;
 			}
 			var targetId = link.getAttribute('href');

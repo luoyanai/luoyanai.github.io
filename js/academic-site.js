@@ -91,7 +91,7 @@
 	});
 
 	if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-		var revealItems = document.querySelectorAll('.section-heading, .content-grid, .research-map, .publication-item, .project-row, .timeline-item, .award-item, .letter-card, .contact-grid');
+		var revealItems = document.querySelectorAll('.section-heading, .content-grid, .research-map, .publication-item, .timeline-item, .award-item, .letter-card, .contact-grid');
 		var revealObserver = new IntersectionObserver(function (entries, observer) {
 			entries.forEach(function (entry) {
 				if (entry.isIntersecting) {

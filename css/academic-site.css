@@ -706,6 +706,10 @@ h6 {
 	border-top: 1px solid var(--line);
 }
 
+.project-list.is-expanded .project-row:not([hidden]) {
+	display: grid;
+}
+
 .project-row {
 	display: grid;
 	grid-template-columns: 310px minmax(0, 1fr);

@@ -722,10 +722,6 @@ h6 {
 	transform: translateY(-2px);
 }
 
-.project-list:not(.is-expanded) .project-row:nth-child(n + 5) {
-	display: none;
-}
-
 .project-video {
 	position: relative;
 	display: block;
@@ -785,26 +781,6 @@ h6 {
 .project-copy p {
 	font-size: 14px;
 	line-height: 1.6;
-}
-
-.project-list-actions {
-	padding-top: 20px;
-	text-align: center;
-}
-
-.project-list-actions button {
-	padding: 8px 0;
-	border: 0;
-	background: transparent;
-	color: var(--blue);
-	cursor: pointer;
-}
-
-.project-list-actions button:hover,
-.project-list-actions button:focus {
-	color: var(--blue-dark);
-	text-decoration: underline;
-	text-underline-offset: 3px;
 }
 
 .timeline {

@@ -34,27 +34,6 @@
 	});
 
 	var activeFilter = 'all';
-	var manuallyExpandedProjects = false;
-	var projectList = document.querySelector('.project-list');
-	var projectToggle = document.getElementById('toggleProjects');
-
-	function setProjectExpansion(expanded) {
-		if (!projectList || !projectToggle) {
-			return;
-		}
-		projectList.classList.toggle('is-expanded', expanded);
-		projectToggle.setAttribute('aria-expanded', String(expanded));
-		projectToggle.innerHTML = expanded
-			? 'Show fewer demonstrations <span aria-hidden="true">↑</span>'
-			: 'Show all demonstrations <span aria-hidden="true">↓</span>';
-	}
-
-	if (projectToggle) {
-		projectToggle.addEventListener('click', function () {
-			manuallyExpandedProjects = !manuallyExpandedProjects;
-			setProjectExpansion(manuallyExpandedProjects);
-		});
-	}
 
 	function applyResearchFilter(button) {
 		if (!button) {
@@ -85,11 +64,6 @@
 				projectCount += 1;
 			}
 		});
-
-		if (projectToggle) {
-			projectToggle.hidden = activeFilter !== 'all';
-			setProjectExpansion(activeFilter !== 'all' || manuallyExpandedProjects);
-		}
 
 		var label = button.querySelector('strong').textContent;
 		var status = document.getElementById('researchFilterStatus');

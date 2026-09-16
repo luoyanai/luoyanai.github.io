@@ -21,6 +21,47 @@
 	window.addEventListener('scroll', updateScrollUI, { passive: true });
 	window.addEventListener('resize', updateScrollUI);
 
+	function copyText(text) {
+		if (navigator.clipboard && window.isSecureContext) {
+			return navigator.clipboard.writeText(text);
+		}
+
+		return new Promise(function (resolve, reject) {
+			var temporaryInput = document.createElement('textarea');
+			temporaryInput.value = text;
+			temporaryInput.setAttribute('readonly', '');
+			temporaryInput.style.position = 'fixed';
+			temporaryInput.style.opacity = '0';
+			document.body.appendChild(temporaryInput);
+			temporaryInput.select();
+			var copied = document.execCommand('copy');
+			document.body.removeChild(temporaryInput);
+			if (copied) {
+				resolve();
+			} else {
+				reject(new Error('Clipboard copy failed'));
+			}
+		});
+	}
+
+	document.querySelectorAll('[data-copy-email]').forEach(function (link) {
+		var resetTimer;
+		link.addEventListener('click', function (event) {
+			event.preventDefault();
+			copyText(link.getAttribute('data-copy-email')).then(function () {
+				window.clearTimeout(resetTimer);
+				link.textContent = 'Email copied';
+				link.setAttribute('aria-label', 'Email address copied');
+				resetTimer = window.setTimeout(function () {
+					link.textContent = 'Email';
+					link.setAttribute('aria-label', 'Copy email address');
+				}, 1800);
+			}).catch(function () {
+				window.location.href = link.href;
+			});
+		});
+	});
+
 	document.querySelectorAll('.summary-toggle').forEach(function (button) {
 		button.addEventListener('click', function () {
 			var summary = button.closest('.publication-content').querySelector('.research-summary');

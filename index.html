@@ -21,13 +21,14 @@
 	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2317212b'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-size='30' fill='white'%3ELY%3C/text%3E%3C/svg%3E">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/fontawesome-all.css">
-	<link rel="stylesheet" href="css/academic-ai.css">
+	<link rel="stylesheet" href="css/academic-site.css">
 </head>
 
 <body data-spy="scroll" data-target="#siteNav" data-offset="84">
 	<a class="skip-link" href="#main">Skip to content</a>
 
 	<header class="site-header">
+		<div class="scroll-progress" aria-hidden="true"><span></span></div>
 		<nav id="siteNav" class="navbar navbar-expand-lg navbar-light" aria-label="Primary navigation">
 			<div class="container">
 				<a class="navbar-brand" href="#top" aria-label="Yan Luo home">
@@ -78,9 +79,9 @@
 						<p class="hero-subtitle">Ph.D. Candidate · Humanoid Robotics and Embodied AI</p>
 						<p class="hero-lead">
 							I build physically grounded robot intelligence at the intersection of
-							<a href="#publications" data-guide-query="vision-language models">vision-language models</a>,
-							<a href="#publications" data-guide-query="reinforcement learning">reinforcement learning</a>, and
-							<a href="#projects" data-guide-query="whole-body control">whole-body control</a>. My work turns high-level
+							<a href="#publications">vision-language models</a>,
+							<a href="#publications">reinforcement learning</a>, and
+							<a href="#projects">whole-body control</a>. My work turns high-level
 							visual and semantic knowledge into actions that can survive real-world contact, uncertainty, and hardware constraints.
 						</p>
 						<p class="postdoc-note">
@@ -88,26 +89,12 @@
 							and reliable deployment on humanoids and mobile manipulators.
 						</p>
 
-						<section class="research-guide" aria-labelledby="researchGuideTitle">
-							<div class="research-guide-heading">
-								<div>
-									<p class="guide-kicker"><i class="fas fa-magic" aria-hidden="true"></i> AI research guide</p>
-									<h2 id="researchGuideTitle">Ask about my work</h2>
-								</div>
-								<p>Citation-backed answers from this page</p>
-							</div>
-							<form class="research-guide-form" id="researchGuideForm">
-								<label class="sr-only" for="researchQuestion">Question about Yan Luo's research</label>
-								<input id="researchQuestion" type="search" autocomplete="off" placeholder="e.g. Which work shows real-robot deployment?">
-								<button type="submit">Ask</button>
-							</form>
-							<div class="guide-prompts" aria-label="Example questions">
-								<button type="button" data-research-question="How do you use VLM feedback for robot learning?">VLM feedback</button>
-								<button type="button" data-research-question="Which work shows real-robot deployment?">Real-robot evidence</button>
-								<button type="button" data-research-question="What is the fit with embodied foundation models?">Postdoctoral fit</button>
-							</div>
-							<div class="guide-answer" id="researchGuideAnswer" aria-live="polite" hidden></div>
-						</section>
+						<nav class="hero-themes" aria-label="Explore research themes">
+							<span>Explore by contribution</span>
+							<a href="#about" data-filter-target="perceive"><b>01</b> Perception</a>
+							<a href="#about" data-filter-target="reason"><b>02</b> Robot learning</a>
+							<a href="#about" data-filter-target="act"><b>03</b> Physical systems</a>
+						</nav>
 					</div>
 				</div>
 			</div>
@@ -212,10 +199,10 @@
 							</p>
 							<div class="publication-links">
 								<a href="#videoModal3" data-toggle="modal" data-target="#videoModal3"><i class="fas fa-video" aria-hidden="true"></i> Demo Video</a>
-								<button type="button" class="ai-brief-toggle" aria-expanded="false"><i class="fas fa-magic" aria-hidden="true"></i> AI Research Brief</button>
+								<button type="button" class="summary-toggle" aria-expanded="false"><i class="fas fa-plus" aria-hidden="true"></i> Research Summary</button>
 							</div>
-							<div class="ai-brief" hidden>
-								<strong>Research brief.</strong> TOVEP gives a general-purpose VLM structured geometric evidence before asking it to localize a physical action. Its value lies in converting noisy RGB-D observations into interpretable support and confidence cues that remain connected to an executable picking pose.
+							<div class="research-summary" hidden>
+								<strong>Summary.</strong> TOVEP gives a general-purpose VLM structured geometric evidence before asking it to localize a physical action. Its value lies in converting noisy RGB-D observations into interpretable support and confidence cues that remain connected to an executable picking pose.
 							</div>
 							<div class="tag-row">
 								<span>RGB-D evidence enhancement</span>
@@ -241,10 +228,10 @@
 							<div class="publication-links">
 								<a href="https://ieeexplore.ieee.org/document/11419765" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
 								<a href="#projects"><i class="fas fa-video" aria-hidden="true"></i> Demo</a>
-								<button type="button" class="ai-brief-toggle" aria-expanded="false"><i class="fas fa-magic" aria-hidden="true"></i> AI Research Brief</button>
+								<button type="button" class="summary-toggle" aria-expanded="false"><i class="fas fa-plus" aria-hidden="true"></i> Research Summary</button>
 							</div>
-							<div class="ai-brief" hidden>
-								<strong>Research brief.</strong> MotionVL turns visual-language evaluation into training supervision for humanoid reinforcement learning. It connects foundation-model judgment with low-level control, with real-robot robustness and motion quality as the practical evidence.
+							<div class="research-summary" hidden>
+								<strong>Summary.</strong> MotionVL turns visual-language evaluation into training supervision for humanoid reinforcement learning. It connects foundation-model judgment with low-level control, with real-robot robustness and motion quality as the practical evidence.
 							</div>
 							<div class="tag-row">
 								<span>Reinforcement learning</span>
@@ -269,10 +256,10 @@
 							</p>
 							<div class="publication-links">
 								<a href="https://link.springer.com/article/10.1007/s11431-024-2872-7" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
-								<button type="button" class="ai-brief-toggle" aria-expanded="false"><i class="fas fa-magic" aria-hidden="true"></i> AI Research Brief</button>
+								<button type="button" class="summary-toggle" aria-expanded="false"><i class="fas fa-plus" aria-hidden="true"></i> Research Summary</button>
 							</div>
-							<div class="ai-brief" hidden>
-								<strong>Research brief.</strong> This work addresses the control layer of embodied intelligence: maintaining dynamic stability when terrain disturbances change over time. The method combines DCM stabilization, variable height, and capturability for physically testable recovery behavior.
+							<div class="research-summary" hidden>
+								<strong>Summary.</strong> This work addresses the control layer of embodied intelligence: maintaining dynamic stability when terrain disturbances change over time. The method combines DCM stabilization, variable height, and capturability for physically testable recovery behavior.
 							</div>
 							<div class="tag-row">
 								<span>Dynamic balance</span>
@@ -297,10 +284,10 @@
 							</p>
 							<div class="publication-links">
 								<a href="files/Image_Foreground_Segmentation_Based_on_Small_Data_Set_for_Visual_Servo_Applications.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
-								<button type="button" class="ai-brief-toggle" aria-expanded="false"><i class="fas fa-magic" aria-hidden="true"></i> AI Research Brief</button>
+								<button type="button" class="summary-toggle" aria-expanded="false"><i class="fas fa-plus" aria-hidden="true"></i> Research Summary</button>
 							</div>
-							<div class="ai-brief" hidden>
-								<strong>Research brief.</strong> The study links small-data visual segmentation to closed-loop visual servo control. It provides an early foundation for the broader research theme of turning learned perception into reliable physical action.
+							<div class="research-summary" hidden>
+								<strong>Summary.</strong> The study links small-data visual segmentation to closed-loop visual servo control. It provides an early foundation for the broader research theme of turning learned perception into reliable physical action.
 							</div>
 							<div class="tag-row">
 								<span>Foreground segmentation</span>
@@ -701,6 +688,6 @@
 
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.js"></script>
-	<script src="js/academic-ai.js"></script>
+	<script src="js/academic-site.js"></script>
 </body>
 </html>

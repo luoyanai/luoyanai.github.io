@@ -18,19 +18,19 @@
 	<meta name="twitter:card" content="summary_large_image">
 
 	<link rel="preload" as="image" href="images/img1-900.webp" type="image/webp" fetchpriority="high">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2317212b'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-size='30' fill='white'%3ELY%3C/text%3E%3C/svg%3E">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/fontawesome-all.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/academic-ai.css">
 </head>
 
 <body data-spy="scroll" data-target="#siteNav" data-offset="84">
 	<a class="skip-link" href="#main">Skip to content</a>
 
 	<header class="site-header">
-		<nav id="siteNav" class="navbar navbar-expand-lg navbar-light">
+		<nav id="siteNav" class="navbar navbar-expand-lg navbar-light" aria-label="Primary navigation">
 			<div class="container">
 				<a class="navbar-brand" href="#top" aria-label="Yan Luo home">
-					<span class="brand-mark">LY</span>
 					<span>Yan Luo</span>
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,12 +38,12 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-lg-auto">
-						<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="#about">Research</a></li>
 						<li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-						<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+						<li class="nav-item"><a class="nav-link" href="#projects">Demos</a></li>
 						<li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
 						<li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-						<li class="nav-item"><a class="nav-link" href="#letters">Letters</a></li>
+						<li class="nav-item"><a class="nav-link" href="#letters">References</a></li>
 						<li class="nav-item"><a class="nav-link nav-cta" href="files/Yan_Luo_Academic_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
 					</ul>
 				</div>
@@ -54,53 +54,60 @@
 	<main id="main">
 		<section class="hero-section" id="top">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-7">
+				<div class="academic-hero">
+					<aside class="profile-column" aria-label="Profile summary">
+						<picture>
+							<source srcset="images/img1-900.webp" type="image/webp">
+							<img class="profile-photo" src="images/img1.png" alt="Yan Luo, Ph.D. candidate in humanoid robotics" width="900" height="1222" decoding="async" fetchpriority="high">
+						</picture>
+						<div class="profile-links" aria-label="Profile links">
+							<a href="files/Yan_Luo_Academic_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+							<span aria-hidden="true">·</span>
+							<a href="#publications">Publications</a>
+							<span aria-hidden="true">·</span>
+							<a href="#projects">Videos</a>
+							<span aria-hidden="true">·</span>
+							<a href="mailto:luoyan99@sjtu.edu.cn">Email</a>
+						</div>
+						<p class="profile-affiliation">School of Mechanical Engineering<br>Shanghai Jiao Tong University</p>
+					</aside>
+
+					<div class="hero-copy">
 						<p class="eyebrow">Postdoctoral Research Portfolio</p>
 						<h1>Yan Luo</h1>
-						<p class="hero-subtitle">Ph.D. Candidate, Shanghai Jiao Tong University</p>
+						<p class="hero-subtitle">Ph.D. Candidate · Humanoid Robotics and Embodied AI</p>
 						<p class="hero-lead">
-							I work on humanoid robotics and embodied intelligence, connecting reinforcement learning,
-							vision-language modeling, and whole-body control to build robots that can perceive, reason,
-							act, and improve through real-world interaction.
+							I build physically grounded robot intelligence at the intersection of
+							<a href="#publications" data-guide-query="vision-language models">vision-language models</a>,
+							<a href="#publications" data-guide-query="reinforcement learning">reinforcement learning</a>, and
+							<a href="#projects" data-guide-query="whole-body control">whole-body control</a>. My work turns high-level
+							visual and semantic knowledge into actions that can survive real-world contact, uncertainty, and hardware constraints.
 						</p>
-						<div class="hero-actions">
-							<a class="btn-main" href="files/Yan_Luo_Academic_CV.pdf" target="_blank" rel="noopener noreferrer">
-								<i class="fas fa-file-alt" aria-hidden="true"></i>
-								View CV
-							</a>
-							<a class="btn-quiet" href="#publications">
-								<i class="fas fa-book-open" aria-hidden="true"></i>
-								Selected Work
-							</a>
-							<a class="btn-quiet" href="mailto:luoyan99@sjtu.edu.cn">
-								<i class="fas fa-envelope" aria-hidden="true"></i>
-								Email
-							</a>
-						</div>
-						<ul class="hero-tags" aria-label="Research keywords">
-							<li>Embodied AI</li>
-							<li>Humanoid Robotics</li>
-							<li>Vision-Language Models</li>
-							<li>Reinforcement Learning</li>
-							<li>Whole-Body Control</li>
-						</ul>
-					</div>
-					<div class="col-lg-5 mt-5 mt-lg-0">
-						<aside class="profile-panel" aria-label="Profile summary">
-							<picture>
-								<source srcset="images/img1-900.webp" type="image/webp">
-								<img class="profile-photo" src="images/img1.png" alt="Yan Luo, Ph.D. candidate in humanoid robotics" width="900" height="1222" decoding="async" fetchpriority="high">
-							</picture>
-							<div class="profile-body">
-								<h2>Humanoid Robotics and Embodied Intelligence</h2>
-								<ul class="profile-list">
-									<li><i class="fas fa-university" aria-hidden="true"></i> School of Mechanical Engineering, SJTU</li>
-									<li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Shanghai, China</li>
-									<li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:luoyan99@sjtu.edu.cn">luoyan99@sjtu.edu.cn</a></li>
-								</ul>
+						<p class="postdoc-note">
+							<strong>Postdoctoral direction.</strong> Foundation models for robotics, self-improving embodied agents,
+							and reliable deployment on humanoids and mobile manipulators.
+						</p>
+
+						<section class="research-guide" aria-labelledby="researchGuideTitle">
+							<div class="research-guide-heading">
+								<div>
+									<p class="guide-kicker"><i class="fas fa-magic" aria-hidden="true"></i> AI research guide</p>
+									<h2 id="researchGuideTitle">Ask about my work</h2>
+								</div>
+								<p>Citation-backed answers from this page</p>
 							</div>
-						</aside>
+							<form class="research-guide-form" id="researchGuideForm">
+								<label class="sr-only" for="researchQuestion">Question about Yan Luo's research</label>
+								<input id="researchQuestion" type="search" autocomplete="off" placeholder="e.g. Which work shows real-robot deployment?">
+								<button type="submit">Ask</button>
+							</form>
+							<div class="guide-prompts" aria-label="Example questions">
+								<button type="button" data-research-question="How do you use VLM feedback for robot learning?">VLM feedback</button>
+								<button type="button" data-research-question="Which work shows real-robot deployment?">Real-robot evidence</button>
+								<button type="button" data-research-question="What is the fit with embodied foundation models?">Postdoctoral fit</button>
+							</div>
+							<div class="guide-answer" id="researchGuideAnswer" aria-live="polite" hidden></div>
+						</section>
 					</div>
 				</div>
 			</div>
@@ -109,8 +116,8 @@
 		<section class="page-section" id="about">
 			<div class="container">
 				<div class="section-heading">
-					<p class="section-kicker">About</p>
-					<h2>Researcher Profile</h2>
+					<p class="section-kicker">Research agenda</p>
+					<h2>Perceive, reason, and act in the physical world</h2>
 				</div>
 				<div class="row content-grid">
 					<div class="col-lg-7">
@@ -145,6 +152,35 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="research-map" aria-labelledby="researchMapTitle">
+					<div class="research-map-heading">
+						<h3 id="researchMapTitle">Explore the research map</h3>
+						<p id="researchFilterStatus" aria-live="polite">Showing all selected work.</p>
+					</div>
+					<div class="research-map-controls" role="group" aria-label="Filter selected work by research contribution">
+						<button type="button" class="research-map-item is-active" data-research-filter="all" aria-pressed="true">
+							<span class="map-index">All</span>
+							<strong>Complete research arc</strong>
+							<small>From sensing to deployment</small>
+						</button>
+						<button type="button" class="research-map-item" data-research-filter="perceive" aria-pressed="false">
+							<span class="map-index">01</span>
+							<strong>Perceive</strong>
+							<small>Multimodal evidence and visual grounding</small>
+						</button>
+						<button type="button" class="research-map-item" data-research-filter="reason" aria-pressed="false">
+							<span class="map-index">02</span>
+							<strong>Reason &amp; learn</strong>
+							<small>VLM feedback, rewards, and robot learning</small>
+						</button>
+						<button type="button" class="research-map-item" data-research-filter="act" aria-pressed="false">
+							<span class="map-index">03</span>
+							<strong>Act</strong>
+							<small>Whole-body control and real-robot systems</small>
+						</button>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -159,7 +195,7 @@
 				</div>
 
 				<div class="publication-list">
-					<article class="publication-item">
+					<article class="publication-item" id="tovep-publication" data-research="perceive reason act">
 						<a class="publication-media" href="#videoModal3" data-toggle="modal" data-target="#videoModal3" aria-label="Play TOVEP demonstration video">
 							<img src="images/publication-covers/tovep.jpg" alt="TOVEP visual-geometric evidence enhancement for VLM-guided fruit picking-point localization" width="1280" height="720" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
@@ -176,6 +212,10 @@
 							</p>
 							<div class="publication-links">
 								<a href="#videoModal3" data-toggle="modal" data-target="#videoModal3"><i class="fas fa-video" aria-hidden="true"></i> Demo Video</a>
+								<button type="button" class="ai-brief-toggle" aria-expanded="false"><i class="fas fa-magic" aria-hidden="true"></i> AI Research Brief</button>
+							</div>
+							<div class="ai-brief" hidden>
+								<strong>Research brief.</strong> TOVEP gives a general-purpose VLM structured geometric evidence before asking it to localize a physical action. Its value lies in converting noisy RGB-D observations into interpretable support and confidence cues that remain connected to an executable picking pose.
 							</div>
 							<div class="tag-row">
 								<span>RGB-D evidence enhancement</span>
@@ -185,7 +225,7 @@
 						</div>
 					</article>
 
-					<article class="publication-item">
+					<article class="publication-item" id="motionvl-publication" data-research="reason act">
 						<a class="publication-media" href="#videoModal2" data-toggle="modal" data-target="#videoModal2" aria-label="Play MotionVL demonstration video">
 							<img src="images/publication-covers/motionvl.jpg" alt="MotionVL visual-language supervision framework for humanoid reinforcement learning" width="1280" height="720" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
@@ -201,6 +241,10 @@
 							<div class="publication-links">
 								<a href="https://ieeexplore.ieee.org/document/11419765" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
 								<a href="#projects"><i class="fas fa-video" aria-hidden="true"></i> Demo</a>
+								<button type="button" class="ai-brief-toggle" aria-expanded="false"><i class="fas fa-magic" aria-hidden="true"></i> AI Research Brief</button>
+							</div>
+							<div class="ai-brief" hidden>
+								<strong>Research brief.</strong> MotionVL turns visual-language evaluation into training supervision for humanoid reinforcement learning. It connects foundation-model judgment with low-level control, with real-robot robustness and motion quality as the practical evidence.
 							</div>
 							<div class="tag-row">
 								<span>Reinforcement learning</span>
@@ -210,7 +254,7 @@
 						</div>
 					</article>
 
-					<article class="publication-item">
+					<article class="publication-item" id="walking-publication" data-research="act">
 						<a class="publication-media" href="#videoModal" data-toggle="modal" data-target="#videoModal" aria-label="Play dynamic walking demonstration video">
 							<img src="images/publication-covers/dcm-walking.jpg" alt="Humanoid robot dynamic stable walking experiment setup" width="1280" height="720" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
@@ -225,6 +269,10 @@
 							</p>
 							<div class="publication-links">
 								<a href="https://link.springer.com/article/10.1007/s11431-024-2872-7" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
+								<button type="button" class="ai-brief-toggle" aria-expanded="false"><i class="fas fa-magic" aria-hidden="true"></i> AI Research Brief</button>
+							</div>
+							<div class="ai-brief" hidden>
+								<strong>Research brief.</strong> This work addresses the control layer of embodied intelligence: maintaining dynamic stability when terrain disturbances change over time. The method combines DCM stabilization, variable height, and capturability for physically testable recovery behavior.
 							</div>
 							<div class="tag-row">
 								<span>Dynamic balance</span>
@@ -234,7 +282,7 @@
 						</div>
 					</article>
 
-					<article class="publication-item">
+					<article class="publication-item" id="visual-servo-publication" data-research="perceive act">
 						<a class="publication-media" href="files/Image_Foreground_Segmentation_Based_on_Small_Data_Set_for_Visual_Servo_Applications.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open image foreground segmentation paper PDF">
 							<img src="images/publication-covers/visual-servo-segmentation.jpg" alt="Image foreground segmentation results for visual servo applications" width="1280" height="720" decoding="async">
 							<span class="media-action"><i class="fas fa-file-alt" aria-hidden="true"></i></span>
@@ -249,6 +297,10 @@
 							</p>
 							<div class="publication-links">
 								<a href="files/Image_Foreground_Segmentation_Based_on_Small_Data_Set_for_Visual_Servo_Applications.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
+								<button type="button" class="ai-brief-toggle" aria-expanded="false"><i class="fas fa-magic" aria-hidden="true"></i> AI Research Brief</button>
+							</div>
+							<div class="ai-brief" hidden>
+								<strong>Research brief.</strong> The study links small-data visual segmentation to closed-loop visual servo control. It provides an early foundation for the broader research theme of turning learned perception into reliable physical action.
 							</div>
 							<div class="tag-row">
 								<span>Foreground segmentation</span>
@@ -269,7 +321,7 @@
 				</div>
 
 				<div class="project-list">
-					<article class="project-row">
+					<article class="project-row" data-research="perceive reason act">
 						<div class="project-video">
 							<video controls preload="metadata" poster="images/project-posters/outdoor-fruit-picking.jpg" playsinline aria-label="Outdoor humanoid fruit picking demonstration">
 								<source src="images/project%20videos/pick.mp4" type="video/mp4">
@@ -287,7 +339,7 @@
 						</div>
 					</article>
 
-					<article class="project-row">
+					<article class="project-row" data-research="perceive reason act">
 						<div class="project-video">
 							<video controls preload="metadata" poster="images/project-posters/retail-picking.jpg" playsinline aria-label="Real-world retail picking demonstration">
 								<source src="images/project%20videos/shoppick.mp4" type="video/mp4">
@@ -305,7 +357,7 @@
 						</div>
 					</article>
 
-					<article class="project-row">
+					<article class="project-row" data-research="perceive reason act">
 						<div class="project-video">
 							<video controls preload="metadata" poster="images/project-posters/beverage-serving.jpg" playsinline aria-label="Language-guided beverage serving demonstration">
 								<source src="images/project%20videos/sprite.mp4" type="video/mp4">
@@ -323,7 +375,7 @@
 						</div>
 					</article>
 
-					<article class="project-row">
+					<article class="project-row" data-research="reason act">
 						<div class="project-video">
 							<video controls preload="metadata" poster="images/project-posters/teleoperation.jpg" playsinline aria-label="Whole-body humanoid teleoperation demonstration">
 								<source src="images/project%20videos/teleoperation.mp4" type="video/mp4">
@@ -341,7 +393,7 @@
 						</div>
 					</article>
 
-					<article class="project-row">
+					<article class="project-row" data-research="act">
 						<div class="project-video">
 							<video controls preload="metadata" poster="images/project-posters/disturbance-walking.jpg" playsinline aria-label="Disturbance-resilient humanoid walking demonstration">
 								<source src="images/project%20videos/shakingboard.mp4" type="video/mp4">
@@ -359,7 +411,7 @@
 						</div>
 					</article>
 
-					<article class="project-row">
+					<article class="project-row" data-research="perceive reason act">
 						<div class="project-video">
 							<video controls preload="metadata" poster="images/project-posters/retail-simulation.jpg" playsinline aria-label="Retail manipulation simulation demonstration">
 								<source src="images/project%20videos/shop.mp4" type="video/mp4">
@@ -377,7 +429,7 @@
 						</div>
 					</article>
 
-					<article class="project-row">
+					<article class="project-row" data-research="perceive reason act">
 						<div class="project-video">
 							<video controls preload="metadata" poster="images/project-posters/smart-factory.jpg" playsinline aria-label="Smart factory embodied robot demonstration">
 								<source src="images/project%20videos/factory.mp4" type="video/mp4">
@@ -396,7 +448,7 @@
 						</div>
 					</article>
 
-					<article class="project-row">
+					<article class="project-row" data-research="act">
 						<div class="project-video">
 							<video controls preload="metadata" poster="images/project-posters/piano-media.jpg" playsinline aria-label="Humanoid piano performance media report demonstration">
 								<source src="images/project%20videos/play%20piano%20media%20reports.mp4" type="video/mp4">
@@ -413,6 +465,9 @@
 							</p>
 						</div>
 					</article>
+				</div>
+				<div class="project-list-actions">
+					<button type="button" id="toggleProjects" aria-expanded="false">Show all demonstrations <span aria-hidden="true">↓</span></button>
 				</div>
 			</div>
 		</section>
@@ -646,41 +701,6 @@
 
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.js"></script>
-	<script>
-		(function () {
-			var links = document.querySelectorAll('a[href^="#"]');
-			for (var i = 0; i < links.length; i += 1) {
-				links[i].addEventListener('click', function (event) {
-					var targetId = this.getAttribute('href');
-					if (!targetId || targetId === '#') {
-						return;
-					}
-					var target = document.querySelector(targetId);
-					if (!target) {
-						return;
-					}
-					event.preventDefault();
-					target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-					$('.navbar-collapse').collapse('hide');
-				});
-			}
-		})();
-
-		$('.modal').on('show.bs.modal', function () {
-			$(this).find('video source[data-src]').each(function () {
-				if (!this.getAttribute('src')) {
-					this.setAttribute('src', this.dataset.src);
-					this.parentElement.load();
-				}
-			});
-		});
-
-		$('.modal').on('hidden.bs.modal', function () {
-			$(this).find('video').each(function () {
-				this.pause();
-				this.currentTime = 0;
-			});
-		});
-	</script>
+	<script src="js/academic-ai.js"></script>
 </body>
 </html>

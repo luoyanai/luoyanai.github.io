@@ -17,14 +17,14 @@
 	<meta property="og:image:type" content="image/jpeg">
 	<meta name="twitter:card" content="summary_large_image">
 
-	<link rel="preload" as="image" href="images/yan-luo-portrait.jpg" type="image/jpeg" fetchpriority="high">
+	<link rel="preload" as="image" href="images/yan-luo-portrait-640.webp" imagesrcset="images/yan-luo-portrait-320.webp 320w, images/yan-luo-portrait-640.webp 640w, images/yan-luo-portrait-960.webp 960w" imagesizes="(max-width: 479px) 108px, (max-width: 767px) 132px, (max-width: 991px) 220px, 265px" type="image/webp" fetchpriority="high">
 	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2317212b'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-size='30' fill='white'%3ELY%3C/text%3E%3C/svg%3E">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/fontawesome-all.css">
-	<link rel="stylesheet" href="css/academic-site.css?v=20260917-1">
+	<link rel="stylesheet" href="css/academic-site.css?v=20260917-2">
 </head>
 
-<body data-spy="scroll" data-target="#siteNav" data-offset="84">
+<body>
 	<a class="skip-link" href="#main">Skip to content</a>
 
 	<header class="site-header">
@@ -58,24 +58,30 @@
 				<div class="academic-hero">
 					<aside class="profile-column" aria-label="Profile summary">
 						<picture>
-							<img class="profile-photo" src="images/yan-luo-portrait.jpg" alt="Yan Luo, Ph.D. candidate in humanoid robotics" width="1536" height="2048" decoding="async" fetchpriority="high">
+							<source type="image/webp" srcset="images/yan-luo-portrait-320.webp 320w, images/yan-luo-portrait-640.webp 640w, images/yan-luo-portrait-960.webp 960w" sizes="(max-width: 479px) 108px, (max-width: 767px) 132px, (max-width: 991px) 220px, 265px">
+							<img class="profile-photo" src="images/yan-luo-portrait.jpg" alt="Yan Luo, Ph.D. candidate in humanoid robotics" width="1655" height="2207" decoding="async" fetchpriority="high">
 						</picture>
 						<div class="profile-links" aria-label="Profile links">
 							<a href="files/Yan_Luo_Academic_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-							<span aria-hidden="true">·</span>
 							<a href="#publications">Publications</a>
-							<span aria-hidden="true">·</span>
 							<a href="#projects">Videos</a>
-							<span aria-hidden="true">·</span>
-							<a href="mailto:luoyan99@sjtu.edu.cn" data-copy-email="luoyan99@sjtu.edu.cn" aria-label="Copy email address">Email</a>
+							<button type="button" class="copy-email" data-copy-email="luoyan99@sjtu.edu.cn" aria-describedby="email-copy-status">Copy email</button>
 						</div>
 						<p class="profile-affiliation">School of Mechanical Engineering<br>Shanghai Jiao Tong University</p>
+						<div class="profile-email-feedback">
+							<p id="email-copy-status" role="status" aria-live="polite" aria-atomic="true"></p>
+							<div id="email-copy-fallback" hidden>
+								<label class="sr-only" for="email-address">Email address</label>
+								<input id="email-address" type="text" readonly value="luoyan99@sjtu.edu.cn">
+							</div>
+						</div>
 					</aside>
 
 					<div class="hero-copy">
 						<p class="eyebrow">Postdoctoral Research Portfolio</p>
 						<h1>Yan Luo</h1>
 						<p class="hero-subtitle">Ph.D. Candidate · Humanoid Robotics and Embodied AI</p>
+						<p class="graduation-note">Expected Ph.D. completion: October 2026</p>
 						<p class="hero-lead">
 							I work on humanoid robotics and embodied intelligence, connecting
 							<a href="#publications">vision-language models</a>,
@@ -84,9 +90,9 @@
 							act, and improve through real-world interaction.
 						</p>
 						<p class="postdoc-note">
-							<strong>Postdoctoral direction.</strong> I am interested in foundation models for robotics, in-context learning (ICL),
-							and recursive self-improvement (RSI) for embodied agents. Building on <a href="#motionvl-publication">MotionVL</a>
-							and my work in multimodal perception and control, I aim to develop robots that learn from context, evaluate their own behavior, and improve through interaction.
+							<strong>Postdoctoral direction.</strong> My postdoctoral interests include foundation models for robotics,
+							in-context learning (ICL), and recursive self-improvement (RSI). Building on
+							<a href="#motionvl-publication">MotionVL</a>, I aim to study how embodied agents use context and feedback to adapt and improve.
 						</p>
 					</div>
 				</div>
@@ -102,17 +108,13 @@
 				<div class="row content-grid">
 					<div class="col-lg-7">
 						<p class="large-copy">
-							My research sits at the intersection of mechanical engineering, robot control, and AI-driven
-							decision making. I develop systems that translate high-level visual and semantic knowledge
-							into executable physical behaviors for humanoids, mobile manipulators, and collaborative
-							robotic platforms.
+							My research connects multimodal perception, robot learning, and whole-body control.
 						</p>
 						<p>
-							My recent work centers on making foundation-model feedback useful for robot learning and
-							perception. In MotionVL, visual-language evaluation and LLM-generated rewards are integrated
-							into humanoid reinforcement learning to improve motion quality and real-robot robustness. In
-							TOVEP, RGB-D observations are transformed into enhanced depth, structural support, and
-							confidence cues for picking-point localization in cluttered fruit scenes.
+							<a href="#motionvl-publication">MotionVL</a> uses vision-language evaluation and generated rewards for humanoid motion learning,
+							while <a href="#tovep-publication">TOVEP</a> structures RGB-D evidence for VLM-guided picking-point localization.
+							My work on <a href="#walking-publication">dynamic walking</a> complements these approaches with methods
+							for maintaining balance under changing terrain conditions.
 						</p>
 					</div>
 					<div class="col-lg-5">
@@ -122,14 +124,6 @@
 								<li><strong>Han Ding</strong>, Academician, Chinese Academy of Sciences</li>
 								<li><strong>Zhenhua Xiong</strong>, Professor, Shanghai Jiao Tong University</li>
 							</ul>
-						</div>
-						<div class="compact-panel panel-accent">
-							<h3>Postdoctoral Fit</h3>
-							<p>
-								My target postdoctoral work connects foundation models, in-context robot learning, and reliable deployment.
-								MotionVL provides a starting point for studying how multimodal evaluation and generated feedback can support
-								adaptation and recursive self-improvement in physical systems.
-							</p>
 						</div>
 					</div>
 				</div>
@@ -147,117 +141,81 @@
 				</div>
 
 				<div class="publication-list">
-					<article class="publication-item" id="tovep-publication" data-research="perceive reason act">
-						<a class="publication-media" href="#videoModal3" data-toggle="modal" data-target="#videoModal3" aria-label="Play TOVEP demonstration video">
-							<img src="images/publication-covers/tovep.jpg" alt="TOVEP visual-geometric evidence enhancement for VLM-guided fruit picking-point localization" width="1280" height="720" decoding="async">
+					<article class="publication-item" id="tovep-publication">
+						<a class="publication-media" href="images/tovep-optimized.mp4" data-toggle="modal" data-target="#videoModal3" aria-label="Play TOVEP demonstration video">
+							<img src="images/publication-covers/tovep.jpg" alt="TOVEP visual-geometric evidence enhancement for VLM-guided fruit picking-point localization" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="publication-content">
-							<p class="pub-meta">Computers and Electronics in Agriculture, 2026 · Under review</p>
 							<h3>TOVEP: Visual-Geometric Evidence Enhancement for VLM-Guided Fruit Picking-Point Localization</h3>
 							<p class="pub-authors"><strong>Yan Luo</strong>, Zexi Bo, Ruonan Liu, Zhenhua Xiong, and Han Ding</p>
+							<p class="pub-meta">Computers and Electronics in Agriculture · 2026 · <span class="pub-status">Manuscript under review</span></p>
 							<p>
-								A visual–geometric evidence enhancement framework that boosts multimodal VLM perception
-								for fruit harvesting: RGB-D is converted into enhanced depth, structural support, and
-								confidence cues, then focused into attachment-region references so the model can more
-								reliably localize picking points and approach orientations.
+								Structures RGB-D observations into depth, structural-support, and confidence cues for
+								VLM-guided picking-point localization. Evaluated across multiple crops against RGB-only
+								and raw-depth baselines without VLM fine-tuning.
 							</p>
 							<div class="publication-links">
-								<a href="#videoModal3" data-toggle="modal" data-target="#videoModal3"><i class="fas fa-video" aria-hidden="true"></i> Demo Video</a>
-								<button type="button" class="summary-toggle" aria-expanded="false"><i class="fas fa-plus" aria-hidden="true"></i> Research Summary</button>
-							</div>
-							<div class="research-summary" hidden>
-								<strong>Summary.</strong> TOVEP gives a general-purpose VLM structured geometric evidence before asking it to localize a physical action. Its value lies in converting noisy RGB-D observations into interpretable support and confidence cues that remain connected to an executable picking pose.
-							</div>
-							<div class="tag-row">
-								<span>RGB-D evidence enhancement</span>
-								<span>Vision-language model</span>
-								<span>Picking-point localization</span>
+								<a href="images/tovep-optimized.mp4" data-toggle="modal" data-target="#videoModal3"><i class="fas fa-video" aria-hidden="true"></i> Video</a>
 							</div>
 						</div>
 					</article>
 
-					<article class="publication-item" id="motionvl-publication" data-research="reason act">
-						<a class="publication-media" href="#videoModal2" data-toggle="modal" data-target="#videoModal2" aria-label="Play MotionVL demonstration video">
-							<img src="images/publication-covers/motionvl.jpg" alt="MotionVL visual-language supervision framework for humanoid reinforcement learning" width="1280" height="720" decoding="async">
+					<article class="publication-item" id="motionvl-publication">
+						<a class="publication-media" href="images/humanoid-optimized.mp4" data-toggle="modal" data-target="#videoModal2" aria-label="Play MotionVL demonstration video">
+							<img src="images/publication-covers/motionvl.jpg" alt="MotionVL vision-language supervision framework for humanoid reinforcement learning" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="publication-content">
-							<p class="pub-meta">IEEE Robotics and Automation Letters, 2025</p>
-							<h3>MotionVL: Visual-Language Supervision for Guiding Reinforcement Learning in Humanoid Motion</h3>
+							<h3><a href="https://ieeexplore.ieee.org/document/11419765" target="_blank" rel="noopener noreferrer">MotionVL: Vision-Language Supervision for Reinforcement Learning of Humanoid Motion</a></h3>
 							<p class="pub-authors"><strong>Yan Luo</strong>, Jianhua Wu, Zhenhua Xiong, and Han Ding</p>
+							<p class="pub-meta">IEEE Robotics and Automation Letters · 11(5), 5717–5724 · 2026</p>
 							<p>
-								A vision-language and LLM-guided reinforcement learning framework for humanoid motion,
-								using semantic supervision and generated rewards to improve robustness and naturalness.
+								Combines vision-language motion evaluation and LLM-generated rewards for humanoid
+								reinforcement learning, with validation in simulation and real-robot locomotion.
 							</p>
 							<div class="publication-links">
 								<a href="https://ieeexplore.ieee.org/document/11419765" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
-								<a href="#projects"><i class="fas fa-video" aria-hidden="true"></i> Demo</a>
-								<button type="button" class="summary-toggle" aria-expanded="false"><i class="fas fa-plus" aria-hidden="true"></i> Research Summary</button>
-							</div>
-							<div class="research-summary" hidden>
-								<strong>Summary.</strong> MotionVL turns visual-language evaluation into training supervision for humanoid reinforcement learning. It connects foundation-model judgment with low-level control, with real-robot robustness and motion quality as the practical evidence.
-							</div>
-							<div class="tag-row">
-								<span>Reinforcement learning</span>
-								<span>Generative reward</span>
-								<span>Humanoid control</span>
+								<a href="images/humanoid-optimized.mp4" data-toggle="modal" data-target="#videoModal2"><i class="fas fa-video" aria-hidden="true"></i> Video</a>
 							</div>
 						</div>
 					</article>
 
-					<article class="publication-item" id="walking-publication" data-research="act">
-						<a class="publication-media" href="#videoModal" data-toggle="modal" data-target="#videoModal" aria-label="Play dynamic walking demonstration video">
-							<img src="images/publication-covers/dcm-walking.jpg" alt="Humanoid robot dynamic stable walking experiment setup" width="1280" height="720" decoding="async">
+					<article class="publication-item" id="walking-publication">
+						<a class="publication-media" href="images/bruce-optimized.mp4" data-toggle="modal" data-target="#videoModal" aria-label="Play dynamic walking demonstration video">
+							<img src="images/publication-covers/dcm-walking.jpg" alt="Humanoid robot dynamic stable walking experiment setup" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="publication-content">
-							<p class="pub-meta">Science China Technological Sciences, 2025</p>
-							<h3>DCM-based Dynamic Stable Walking under Terrain-Induced Time-Varying Disturbances for Humanoid Robots</h3>
+							<h3><a href="https://link.springer.com/article/10.1007/s11431-024-2872-7" target="_blank" rel="noopener noreferrer">DCM-Based Dynamic Stable Walking under Terrain-Induced Time-Varying Disturbances for Humanoid Robots</a></h3>
 							<p class="pub-authors"><strong>Yan Luo</strong>, Chao Liu, Jianhua Wu, Zhenhua Xiong, and Han Ding</p>
+							<p class="pub-meta">Science China Technological Sciences · 68(4), 1420301 · 2025</p>
 							<p>
-								A DCM-based walking method with variable-height stabilization and N-step capturability
-								for stable humanoid locomotion under abrupt terrain inclination changes.
+								Combines variable-height stabilization with DCM control and N-step capturability for humanoid
+								walking under time-varying terrain disturbances, validated in simulation and physical experiments.
 							</p>
 							<div class="publication-links">
 								<a href="https://link.springer.com/article/10.1007/s11431-024-2872-7" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
-								<button type="button" class="summary-toggle" aria-expanded="false"><i class="fas fa-plus" aria-hidden="true"></i> Research Summary</button>
-							</div>
-							<div class="research-summary" hidden>
-								<strong>Summary.</strong> This work addresses the control layer of embodied intelligence: maintaining dynamic stability when terrain disturbances change over time. The method combines DCM stabilization, variable height, and capturability for physically testable recovery behavior.
-							</div>
-							<div class="tag-row">
-								<span>Dynamic balance</span>
-								<span>Capturability</span>
-								<span>Real humanoid robot</span>
+								<a href="images/bruce-optimized.mp4" data-toggle="modal" data-target="#videoModal"><i class="fas fa-video" aria-hidden="true"></i> Video</a>
 							</div>
 						</div>
 					</article>
 
-					<article class="publication-item" id="visual-servo-publication" data-research="perceive act">
+					<article class="publication-item" id="visual-servo-publication">
 						<a class="publication-media" href="files/Image_Foreground_Segmentation_Based_on_Small_Data_Set_for_Visual_Servo_Applications.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open image foreground segmentation paper PDF">
-							<img src="images/publication-covers/visual-servo-segmentation.jpg" alt="Image foreground segmentation results for visual servo applications" width="1280" height="720" decoding="async">
+							<img src="images/publication-covers/visual-servo-segmentation.jpg" alt="Image foreground segmentation results for visual servo applications" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-file-alt" aria-hidden="true"></i></span>
 						</a>
 						<div class="publication-content">
-							<p class="pub-meta">IEEE/ASME International Conference on Advanced Intelligent Mechatronics, 2023</p>
-							<h3>Image Foreground Segmentation Based on Small Data Set for Visual Servo Applications</h3>
+							<h3><a href="files/Image_Foreground_Segmentation_Based_on_Small_Data_Set_for_Visual_Servo_Applications.pdf" target="_blank" rel="noopener noreferrer">Image Foreground Segmentation Based on Small Data Set for Visual Servo Applications</a></h3>
 							<p class="pub-authors"><strong>Yan Luo</strong>, Gaoming Chen, Chao Liu, and Zhenhua Xiong</p>
+							<p class="pub-meta">IEEE/ASME International Conference on Advanced Intelligent Mechatronics · 715–720 · 2023</p>
 							<p>
 								A small-data foreground segmentation method for visual servo applications, combining
 								detection, semantic segmentation, feature comparison, and neural-network control.
 							</p>
 							<div class="publication-links">
 								<a href="files/Image_Foreground_Segmentation_Based_on_Small_Data_Set_for_Visual_Servo_Applications.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper</a>
-								<button type="button" class="summary-toggle" aria-expanded="false"><i class="fas fa-plus" aria-hidden="true"></i> Research Summary</button>
-							</div>
-							<div class="research-summary" hidden>
-								<strong>Summary.</strong> The study links small-data visual segmentation to closed-loop visual servo control. It provides an early foundation for the broader research theme of turning learned perception into reliable physical action.
-							</div>
-							<div class="tag-row">
-								<span>Foreground segmentation</span>
-								<span>Visual servo</span>
-								<span>Small-data learning</span>
 							</div>
 						</div>
 					</article>
@@ -272,132 +230,124 @@
 					<h2>Representative Systems and Demonstrations</h2>
 				</div>
 
-				<div class="project-list is-expanded">
-					<article class="project-row" data-research="perceive reason act">
-						<a class="project-video" href="#projectVideoModal" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project%20videos/pick.mp4" data-video-poster="images/project-posters/outdoor-fruit-picking.jpg" data-video-title="Outdoor Humanoid Fruit Picking" aria-label="Play outdoor humanoid fruit picking demonstration">
+				<div class="project-list">
+					<article class="project-row">
+						<a class="project-video" href="images/project-videos/outdoor-fruit-picking.mp4" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project-videos/outdoor-fruit-picking.mp4" data-video-poster="images/project-posters/outdoor-fruit-picking.jpg" data-video-title="Outdoor Humanoid Fruit Picking" aria-label="Play outdoor humanoid fruit picking demonstration">
 							<img src="images/project-posters/outdoor-fruit-picking.jpg" alt="Outdoor humanoid fruit picking demonstration" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="project-copy">
 							<h3>Outdoor Humanoid Fruit Picking</h3>
+							<p class="project-type">Real robot</p>
 							<p>
-								Outdoor validation of humanoid mobility and manipulation in an unstructured tree-canopy
-								scene, where visibility, reachability, and body balance must be handled together.
-								The demo connects fruit picking-point localization with full-body action, showing a path
-								from multimodal perception to deployable field robotics.
+								Outdoor humanoid fruit picking combining target localization, reaching, and coordinated
+								body motion in a tree-canopy environment.
 							</p>
 						</div>
 					</article>
 
-					<article class="project-row" data-research="perceive reason act">
-						<a class="project-video" href="#projectVideoModal" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project%20videos/shoppick.mp4" data-video-poster="images/project-posters/retail-picking.jpg" data-video-title="Real-World Retail Picking" aria-label="Play real-world retail picking demonstration">
+					<article class="project-row">
+						<a class="project-video" href="images/project-videos/retail-picking.mp4" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project-videos/retail-picking.mp4" data-video-poster="images/project-posters/retail-picking.jpg" data-video-title="Real-World Retail Picking" aria-label="Play real-world retail picking demonstration">
 							<img src="images/project-posters/retail-picking.jpg" alt="Real-world retail picking demonstration" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="project-copy">
 							<h3>Real-World Retail Picking</h3>
+							<p class="project-type">Real robot</p>
 							<p>
-								Real-robot manipulation in a constrained retail setting with shelves, glass doors,
-								counters, and object clutter. The system integrates target grounding, reach-aware planning,
-								collision-conscious motion, and precise execution to complete multi-stage picking tasks
-								reliably in dense, human-centered environments.
+								Real-robot retail picking integrating target grounding, reach-aware planning, and
+								collision-conscious motion for multi-stage manipulation around shelves, doors, and counters.
 							</p>
 						</div>
 					</article>
 
-					<article class="project-row" data-research="perceive reason act">
-						<a class="project-video" href="#projectVideoModal" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project%20videos/sprite.mp4" data-video-poster="images/project-posters/beverage-serving.jpg" data-video-title="Language-Guided Beverage Serving" aria-label="Play language-guided beverage serving demonstration">
+					<article class="project-row">
+						<a class="project-video" href="images/project-videos/beverage-serving.mp4" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project-videos/beverage-serving.mp4" data-video-poster="images/project-posters/beverage-serving.jpg" data-video-title="Language-Guided Beverage Serving" aria-label="Play language-guided beverage serving demonstration">
 							<img src="images/project-posters/beverage-serving.jpg" alt="Language-guided beverage serving demonstration" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="project-copy">
 							<h3>Language-Guided Beverage Serving</h3>
+							<p class="project-type">Real robot</p>
 							<p>
-								Language-conditioned tabletop manipulation requiring object grounding, grasp sequencing,
-								pouring geometry, and fine end-effector control. The task illustrates how high-level
-								instructions can be converted into physically grounded action chains where perception,
-								planning, and contact execution all matter.
+								Language-guided tabletop manipulation integrating object grounding, grasp sequencing,
+								and controlled pouring to execute a coordinated beverage-serving task.
 							</p>
 						</div>
 					</article>
 
-					<article class="project-row" data-research="reason act">
-						<a class="project-video" href="#projectVideoModal" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project%20videos/teleoperation.mp4" data-video-poster="images/project-posters/teleoperation.jpg" data-video-title="Whole-Body Humanoid Teleoperation" aria-label="Play whole-body humanoid teleoperation demonstration">
+					<article class="project-row">
+						<a class="project-video" href="images/project-videos/teleoperation.mp4" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project-videos/teleoperation.mp4" data-video-poster="images/project-posters/teleoperation.jpg" data-video-title="Whole-Body Humanoid Teleoperation" aria-label="Play whole-body humanoid teleoperation demonstration">
 							<img src="images/project-posters/teleoperation.jpg" alt="Whole-body humanoid teleoperation demonstration" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="project-copy">
 							<h3>Whole-Body Humanoid Teleoperation</h3>
+							<p class="project-type">Real robot · Teleoperation</p>
 							<p>
-								VR teleoperation system for mapping human upper-body and hand motions to a humanoid
-								platform under realistic actuation limits. It provides a practical data engine for
-								imitation learning, policy initialization, and evaluating how human intent transfers to
-								whole-body robot control.
+								VR teleoperation maps human upper-body and hand motion to a humanoid platform,
+								supporting demonstration collection for imitation learning and policy development.
 							</p>
 						</div>
 					</article>
 
-					<article class="project-row" data-research="act">
-						<a class="project-video" href="#projectVideoModal" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project%20videos/shakingboard.mp4" data-video-poster="images/project-posters/disturbance-walking.jpg" data-video-title="Disturbance-Resilient Humanoid Walking" aria-label="Play disturbance-resilient humanoid walking demonstration">
+					<article class="project-row">
+						<a class="project-video" href="images/project-videos/disturbance-walking.mp4" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project-videos/disturbance-walking.mp4" data-video-poster="images/project-posters/disturbance-walking.jpg" data-video-title="Disturbance-Resilient Humanoid Walking" aria-label="Play disturbance-resilient humanoid walking demonstration">
 							<img src="images/project-posters/disturbance-walking.jpg" alt="Disturbance-resilient humanoid walking demonstration" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="project-copy">
 							<h3>Disturbance-Resilient Humanoid Walking</h3>
+							<p class="project-type">Real robot</p>
 							<p>
-								Dynamic balance validation on a shaking and tilting support surface, targeting
-								terrain-induced disturbances that break nominal walking controllers. The demo emphasizes
-								controllable recovery through foot placement, center-of-mass regulation, and body-state
-								stabilization under time-varying contacts.
+								Humanoid walking on a shaking and tilting support surface, combining foot-placement
+								adjustment, center-of-mass regulation, and body stabilization to maintain balance under
+								changing terrain conditions.
 							</p>
 						</div>
 					</article>
 
-					<article class="project-row" data-research="perceive reason act">
-						<a class="project-video" href="#projectVideoModal" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project%20videos/shop.mp4" data-video-poster="images/project-posters/retail-simulation.jpg" data-video-title="Retail Manipulation in Simulation" aria-label="Play retail manipulation simulation demonstration">
+					<article class="project-row">
+						<a class="project-video" href="images/project-videos/retail-simulation.mp4" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project-videos/retail-simulation.mp4" data-video-poster="images/project-posters/retail-simulation.jpg" data-video-title="Retail Manipulation in Simulation" aria-label="Play retail manipulation simulation demonstration">
 							<img src="images/project-posters/retail-simulation.jpg" alt="Retail manipulation simulation demonstration" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="project-copy">
 							<h3>Retail Manipulation in Simulation</h3>
+							<p class="project-type">Simulation</p>
 							<p>
-								Convenience-store simulation used to test perception, target selection, grasp planning,
-								and placement policies across repeatable interaction cases. The setting is useful for
-								scaling evaluation before real-robot transfer, especially for tasks that require semantic
-								understanding and precise spatial manipulation.
+								A repeatable retail simulation for evaluating perception, target selection, grasp
+								planning, and placement before real-robot deployment.
 							</p>
 						</div>
 					</article>
 
-					<article class="project-row" data-research="perceive reason act">
-						<a class="project-video" href="#projectVideoModal" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project%20videos/factory.mp4" data-video-poster="images/project-posters/smart-factory.jpg" data-video-title="Digital Twin Smart-Factory with Embodied Robots" aria-label="Play smart factory embodied robot demonstration">
+					<article class="project-row">
+						<a class="project-video" href="images/project-videos/smart-factory.mp4" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project-videos/smart-factory.mp4" data-video-poster="images/project-posters/smart-factory.jpg" data-video-title="Digital Twin Smart-Factory with Embodied Robots" aria-label="Play smart factory embodied robot demonstration">
 							<img src="images/project-posters/smart-factory.jpg" alt="Smart factory embodied robot demonstration" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="project-copy">
 							<h3>Digital Twin Smart-Factory with Embodied Robots</h3>
+							<p class="project-type">Simulation</p>
 							<p>
-								A digital-twin smart-factory scenario that digitizes the plant floor and couples it with
-								robot simulation, treating embodied robots as deployable agents in industrial workflows.
-								The demonstration connects scene understanding, task allocation, and multi-robot
-								coordination in a simulated production environment, bridging isolated robot skills toward
-								integrated manufacturing deployment.
+								A digital-twin factory simulation integrating scene understanding, task allocation,
+								and multi-robot coordination within a shared production workflow.
 							</p>
 						</div>
 					</article>
 
-					<article class="project-row" data-research="act">
-						<a class="project-video" href="#projectVideoModal" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project%20videos/play%20piano%20media%20reports.mp4" data-video-poster="images/project-posters/piano-media.jpg" data-video-title="Humanoid Piano Performance and Media Coverage" aria-label="Play humanoid piano performance media report demonstration">
+					<article class="project-row">
+						<a class="project-video" href="images/project-videos/piano-media.mp4" data-toggle="modal" data-target="#projectVideoModal" data-video-src="images/project-videos/piano-media.mp4" data-video-poster="images/project-posters/piano-media.jpg" data-video-title="Humanoid Piano Performance and Media Coverage" aria-label="Play humanoid piano performance media report demonstration">
 							<img src="images/project-posters/piano-media.jpg" alt="Humanoid piano performance media report demonstration" width="1280" height="720" loading="lazy" decoding="async">
 							<span class="media-action"><i class="fas fa-play" aria-hidden="true"></i></span>
 						</a>
 						<div class="project-copy">
 							<h3>Humanoid Piano Performance and Media Coverage</h3>
+							<p class="project-type">Real robot · Media coverage</p>
 							<p>
-								Publicly reported humanoid piano demonstration focusing on dexterous hand motion,
-								upper-body coordination, and repeatable fine manipulation. Its value is as a visible
-								stress test for actuation precision, timing, and expressive robot behavior in a task
-								that non-specialist audiences can immediately assess.
+								Humanoid piano playing combining coordinated hand and upper-body motion, presented
+								with media coverage of the demonstration.
 							</p>
 						</div>
 					</article>
@@ -409,48 +359,53 @@
 			<div class="container">
 				<div class="section-heading">
 					<p class="section-kicker">Experience</p>
-					<h2>Research Execution and Leadership</h2>
+					<h2>Research Experience</h2>
 				</div>
 				<div class="timeline">
 					<article class="timeline-item">
-						<div class="timeline-label">Research Direction</div>
+						<div class="timeline-label">2025</div>
 						<div class="timeline-content">
-							<h3>Generative AI for Robotics and Embodied Robot Learning</h3>
+							<h3>Humanoid Dynamic Balance Control</h3>
+							<p class="experience-role">Technical lead</p>
 							<p>
-								Developing physically grounded, self-improving embodied robots that can learn from multimodal
-								experience, reason about actions, adapt through reinforcement learning, and improve through
-								real-world interaction.
+								Led controller development, simulation, and physical validation for projects supported by
+								Jiangsu provincial research programs. Developed real-time coordination of center-of-mass
+								height, step clearance, foothold, and gait phase, with experiments on moving platforms and varied terrain.
 							</p>
 						</div>
 					</article>
 					<article class="timeline-item">
-						<div class="timeline-label">System Leadership</div>
+						<div class="timeline-label">2024</div>
 						<div class="timeline-content">
-							<h3>Project Leadership and Real-Robot Systems</h3>
+							<h3>Teleoperation and Vision-Language-Action Manipulation</h3>
+							<p class="experience-role">System development</p>
 							<p>
-								Led national and provincial robotics R&amp;D projects across mechanism design, motion control,
-								AI algorithms, system integration, and real-world validation.
+								Built an integrated platform for teleoperation data collection, dataset inspection,
+								VLA training, policy deployment, and evaluation. Connected RGB-D perception, task reasoning,
+								and visual servo control with humanoid and dual-arm robot interfaces.
 							</p>
 						</div>
 					</article>
 					<article class="timeline-item">
-						<div class="timeline-label">Standards</div>
+						<div class="timeline-label">Robotics R&amp;D</div>
 						<div class="timeline-content">
-							<h3>Safety, Reliability, and Technical Standardization</h3>
+							<h3>Wheeled Humanoid Robot Development</h3>
+							<p class="experience-role">Project lead</p>
 							<p>
-								Contributed to the drafting of the industry standard "Humanoid Robot Technical Requirements"
-								(T/CIET 648-2024), translating robot development experience into verifiable specifications.
+								Led platform development across mechanical design, hardware integration, motion control,
+								and manipulation, culminating in a <a href="#projects">piano-playing demonstration</a>
+								featured in national news media.
 							</p>
 						</div>
 					</article>
 					<article class="timeline-item">
-						<div class="timeline-label">Collaboration</div>
+						<div class="timeline-label">2024</div>
 						<div class="timeline-content">
-							<h3>Industry Collaboration and Deployment Perspective</h3>
+							<h3>Technical Requirements for Humanoid Robotics</h3>
+							<p class="experience-role">Principal contributor · T/CIET 648–2024</p>
 							<p>
-								Collaborated with leading upstream and downstream partners in robotics and AI hardware
-								to translate reliability, cost, maintainability, hardware constraints, and scenario
-								adaptability into research questions grounded in real industrial needs.
+								Contributed to drafting technical requirements for humanoid robots, drawing on practical
+								experience in platform development and system validation.
 							</p>
 						</div>
 					</article>
@@ -462,17 +417,21 @@
 			<div class="container">
 				<div class="section-heading">
 					<p class="section-kicker">Recognition</p>
-					<h2>Honors and Awards</h2>
+					<h2>Honors and Academic Service</h2>
 				</div>
+				<h3 class="recognition-heading">Honors and Awards</h3>
 				<div class="award-grid">
 					<div class="award-item"><span>2026</span> Outstanding Graduate, Shanghai Jiao Tong University</div>
-					<div class="award-item"><span>2026</span> Reviewer, IEEE Robotics and Automation Letters</div>
 					<div class="award-item"><span>2025</span> Jiangsu Province Young Talent Support Program</div>
 					<div class="award-item"><span>2022-2025</span> First-Class Academic Scholarship, SJTU, four consecutive years</div>
 					<div class="award-item"><span>2021</span> Yanshan University Person of the Year, top 5 university-wide</div>
 					<div class="award-item"><span>2020</span> National Scholarship, top 0.2% students nationwide</div>
 					<div class="award-item"><span>2020</span> Hebei Provincial Merit Student, top 0.14% recognition</div>
 					<div class="award-item"><span>2019</span> National Bronze Award, China Internet+ Competition</div>
+				</div>
+				<h3 class="recognition-heading">Academic Service</h3>
+				<div class="award-grid">
+					<div class="award-item"><span>2026</span> Reviewer, IEEE Robotics and Automation Letters</div>
 				</div>
 			</div>
 		</section>
@@ -531,7 +490,7 @@
 					<article class="letter-card">
 						<picture>
 							<source srcset="images/zjw-420.webp" type="image/webp">
-							<img src="images/zjw.png" alt="Jianwei Zhang" width="420" height="450" decoding="async">
+							<img src="images/zjw.png" alt="Jianwei Zhang" width="420" height="450" loading="lazy" decoding="async">
 						</picture>
 						<div>
 							<h3>Jianwei Zhang</h3>
@@ -542,7 +501,7 @@
 					<article class="letter-card">
 						<picture>
 							<source srcset="images/hw-420.webp" type="image/webp">
-							<img src="images/hw.png" alt="Wei Hong" width="420" height="540" decoding="async">
+							<img src="images/hw.png" alt="Wei Hong" width="420" height="540" loading="lazy" decoding="async">
 						</picture>
 						<div>
 							<h3>Wei Hong</h3>
@@ -553,7 +512,7 @@
 					<article class="letter-card">
 						<picture>
 							<source srcset="images/xzh-420.webp" type="image/webp">
-							<img src="images/xzh.png" alt="Zhenhua Xiong" width="420" height="568" decoding="async">
+							<img src="images/xzh.png" alt="Zhenhua Xiong" width="420" height="568" loading="lazy" decoding="async">
 						</picture>
 						<div>
 							<h3>Zhenhua Xiong</h3>
@@ -564,7 +523,7 @@
 					<article class="letter-card">
 						<picture>
 							<source srcset="images/ky-420.webp" type="image/webp">
-							<img src="images/ky.png" alt="Yu Kang" width="420" height="484" decoding="async">
+							<img src="images/ky.png" alt="Yu Kang" width="420" height="484" loading="lazy" decoding="async">
 						</picture>
 						<div>
 							<h3>Yu Kang</h3>
@@ -598,54 +557,89 @@
 		</div>
 	</footer>
 
-	<div class="modal fade video-modal" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true" data-backdrop="true">
+	<div class="modal fade video-modal" id="videoModal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="videoModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="videoModalLabel">Dynamic Stable Walking</h2>
+					<button type="button" class="video-close" data-dismiss="modal" aria-label="Close video"><span aria-hidden="true">&times;</span></button>
+				</div>
 				<div class="modal-body">
-					<video id="bruceVideo" width="100%" height="auto" controls preload="none" poster="images/g1.jpg" playsinline>
+					<video id="bruceVideo" controls preload="none" poster="images/g1.jpg" playsinline aria-label="Dynamic Stable Walking">
 						<source data-src="images/bruce-optimized.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
+				<div class="video-footer">
+					<p class="video-status" role="status" aria-live="polite"></p>
+					<a class="video-direct" href="images/bruce-optimized.mp4" target="_blank" rel="noopener noreferrer">Open video in new tab <span aria-hidden="true">&nearr;</span></a>
+					<p class="video-error" role="alert" hidden>This video could not load. Try opening it in a new tab.</p>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="modal fade video-modal" id="videoModal2" tabindex="-1" role="dialog" aria-labelledby="videoModal2Label" aria-hidden="true" data-backdrop="true">
+	<div class="modal fade video-modal" id="videoModal2" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="videoModal2Label" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="videoModal2Label">MotionVL: Humanoid Motion Learning</h2>
+					<button type="button" class="video-close" data-dismiss="modal" aria-label="Close video"><span aria-hidden="true">&times;</span></button>
+				</div>
 				<div class="modal-body">
-					<video id="humanoidVideo" width="100%" height="auto" controls preload="none" poster="images/g2.jpg" playsinline>
+					<video id="humanoidVideo" controls preload="none" poster="images/g2.jpg" playsinline aria-label="MotionVL: Humanoid Motion Learning">
 						<source data-src="images/humanoid-optimized.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
 				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="modal fade video-modal" id="videoModal3" tabindex="-1" role="dialog" aria-labelledby="videoModal3Label" aria-hidden="true" data-backdrop="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-body">
-					<video id="tovepVideo" width="100%" height="auto" controls preload="none" poster="images/tovep-poster.jpg" playsinline>
-						<source data-src="images/tovep-optimized.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
+				<div class="video-footer">
+					<p class="video-status" role="status" aria-live="polite"></p>
+					<a class="video-direct" href="images/humanoid-optimized.mp4" target="_blank" rel="noopener noreferrer">Open video in new tab <span aria-hidden="true">&nearr;</span></a>
+					<p class="video-error" role="alert" hidden>This video could not load. Try opening it in a new tab.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="modal fade video-modal" id="projectVideoModal" tabindex="-1" role="dialog" aria-labelledby="projectVideoTitle" aria-hidden="true" data-backdrop="true">
+	<div class="modal fade video-modal" id="videoModal3" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="videoModal3Label" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="videoModal3Label">TOVEP: Fruit Picking-Point Localization</h2>
+					<button type="button" class="video-close" data-dismiss="modal" aria-label="Close video"><span aria-hidden="true">&times;</span></button>
+				</div>
 				<div class="modal-body">
-					<h2 class="sr-only" id="projectVideoTitle">Project demonstration</h2>
-					<video id="projectVideo" width="100%" height="auto" controls preload="none" playsinline>
+					<video id="tovepVideo" controls preload="none" poster="images/tovep-poster.jpg" playsinline aria-label="TOVEP: Fruit Picking-Point Localization">
+						<source data-src="images/tovep-optimized.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+				<div class="video-footer">
+					<p class="video-status" role="status" aria-live="polite"></p>
+					<a class="video-direct" href="images/tovep-optimized.mp4" target="_blank" rel="noopener noreferrer">Open video in new tab <span aria-hidden="true">&nearr;</span></a>
+					<p class="video-error" role="alert" hidden>This video could not load. Try opening it in a new tab.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade video-modal" id="projectVideoModal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="projectVideoTitle" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title" id="projectVideoTitle">Project demonstration</h2>
+					<button type="button" class="video-close" data-dismiss="modal" aria-label="Close video"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<video id="projectVideo" controls preload="none" playsinline aria-label="Project demonstration">
 						<source type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
+				</div>
+				<div class="video-footer">
+					<p class="video-status" role="status" aria-live="polite"></p>
+					<a class="video-direct" href="images/project-videos/outdoor-fruit-picking.mp4" target="_blank" rel="noopener noreferrer">Open video in new tab <span aria-hidden="true">&nearr;</span></a>
+					<p class="video-error" role="alert" hidden>This video could not load. Try opening it in a new tab.</p>
 				</div>
 			</div>
 		</div>
@@ -653,6 +647,6 @@
 
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.js"></script>
-	<script src="js/academic-site.js?v=20260916-5"></script>
+	<script src="js/academic-site.js?v=20260917-2"></script>
 </body>
 </html>

@@ -464,7 +464,7 @@ h6 {
 
 .publication-content h3 {
 	margin-bottom: 7px;
-	color: var(--blue);
+	color: var(--ink);
 	font-size: 21px;
 	font-weight: 500;
 	line-height: 1.35;
@@ -952,9 +952,11 @@ main[id],
 	font-size: 13px;
 }
 
-.publication-content h3 a { color: var(--blue); }
-
-.publication-content h3:not(:has(a)) { color: var(--ink); }
+.publication-content h3 a,
+.publication-content h3 a:hover,
+.publication-content h3 a:focus {
+	color: var(--ink);
+}
 
 .timeline-content .experience-role {
 	margin-bottom: 7px;

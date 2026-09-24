@@ -300,10 +300,23 @@ h6 {
 	margin-bottom: 6px;
 }
 
-.meeting-note p:last-child {
+.meeting-note p {
 	color: var(--ink);
 	font-size: 16px;
 	line-height: 1.65;
+}
+
+.meeting-details {
+	margin: 10px 0 0;
+	padding: 0;
+	list-style: none;
+	color: var(--ink);
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+.meeting-details li + li {
+	margin-top: 5px;
 }
 
 .page-section {
@@ -1108,7 +1121,7 @@ main[id],
 	.hero-section, .page-section { padding: 16px 0; background: #fff !important; }
 	.hero-copy h1 { font-size: 30pt; }
 	.section-heading h2 { font-size: 19pt; }
-	.hero-lead, .large-copy, .postdoc-note, .meeting-note p, .project-copy p, .timeline-content p { font-size: 10pt; }
+	.hero-lead, .large-copy, .postdoc-note, .meeting-note p, .meeting-details, .project-copy p, .timeline-content p { font-size: 10pt; }
 	.academic-hero { grid-template-columns: 130px minmax(0, 1fr); gap: 24px; }
 	.profile-column { display: block; padding-top: 0; }
 	.profile-photo { width: 120px; height: 150px; box-shadow: none; }

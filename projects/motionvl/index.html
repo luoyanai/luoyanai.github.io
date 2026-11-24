@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MotionVL uses visual feedback from humanoid motion to generate rewards for reinforcement learning. See the straight-leg walking experiment on hardware.">
+  <title>MotionVL | Yan Luo</title>
+  <link rel="icon" href="../../assets/design/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../project.css">
+</head>
+<body>
+  <a class="skip" href="#study">Skip to the study</a>
+  <header class="mast">
+    <div class="wrap">
+      <nav class="topnav" aria-label="Site navigation">
+        <a class="signature" href="../../"><span class="seal" aria-hidden="true">yl</span> Yan Luo</a>
+        <div class="navlinks"><a href="../../#motionvl-publication">Selected publications</a></div>
+      </nav>
+      <div class="project-intro">
+        <p class="project-meta">IEEE Robotics and Automation Letters · 2026</p>
+        <h1>MotionVL</h1>
+        <p class="lead">How can a robot learn a gait that a person can describe but would find hard to express as a reward? We use video of the robot’s own movement to guide the design of its next training reward.</p>
+        <p class="authors"><strong>Yan Luo</strong>, Jianhua Wu, Zhenhua Xiong, and Han Ding</p>
+        <div class="resources"><a href="https://ieeexplore.ieee.org/document/11419765">Paper</a><a href="#video">Video</a></div>
+      </div>
+    </div>
+  </header>
+  <main class="study wrap" id="study">
+    <figure id="video">
+      <video controls playsinline preload="none" poster="../../assets/publications/motionvl.webp" aria-label="MotionVL humanoid walking demonstration" aria-describedby="video-caption" src="../../assets/publications/motionvl.mp4">
+        <a href="../../assets/publications/motionvl.mp4">Open video</a>
+      </video>
+      <figcaption id="video-caption">A physical humanoid performs the straight-leg gait learned in simulation.</figcaption>
+    </figure>
+    <div>
+      <section>
+        <h2>Turning motion into a reward</h2>
+        <p>A vision-language model describes the motion in a rollout. A language model reads that feedback alongside the requested movement and writes a reward function. We use the reward to train the policy with proximal policy optimization, then evaluate the resulting motion.</p>
+      </section>
+      <section>
+        <h2>From simulation to hardware</h2>
+        <p>We evaluated running, repeated jumping, and single-leg balance in simulation and deployed the straight-leg walking policy on a physical humanoid. Comparisons with hand-designed rewards and rewards generated from text alone tested what the visual feedback contributed.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

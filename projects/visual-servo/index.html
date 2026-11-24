@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small-data foreground segmentation method for guiding robot alignment with image feedback, presented at AIM 2023.">
+  <title>Visual servoing with limited training images | Yan Luo</title>
+  <link rel="icon" href="../../assets/design/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../project.css">
+</head>
+<body>
+  <a class="skip" href="#study">Skip to the study</a>
+  <header class="mast">
+    <div class="wrap">
+      <nav class="topnav" aria-label="Site navigation">
+        <a class="signature" href="../../"><span class="seal" aria-hidden="true">yl</span> Yan Luo</a>
+        <div class="navlinks"><a href="../../#visual-servo-publication">Selected publications</a></div>
+      </nav>
+      <div class="project-intro">
+        <p class="project-meta">IEEE/ASME International Conference on Advanced Intelligent Mechatronics · 2023</p>
+        <h1>Visual servoing with limited training images</h1>
+        <p class="lead">To align a workpiece using a camera, a robot needs image features that stay attached to the part as it moves. We use foreground segmentation to extract those features when only a small training set is available.</p>
+        <p class="authors"><strong>Yan Luo</strong>, Gaoming Chen, Chao Liu, and Zhenhua Xiong</p>
+        <div class="resources"><a href="../../assets/publications/segmentation.pdf">Paper</a><a href="#video">Video</a></div>
+      </div>
+    </div>
+  </header>
+  <main class="study wrap" id="study">
+    <figure id="video">
+      <video controls playsinline preload="none" poster="../../assets/publications/segmentation.webp" aria-label="Reconstructed UR5 workpiece alignment" aria-describedby="video-caption" src="../../assets/publications/segmentation.mp4">
+        <a href="../../assets/publications/segmentation.mp4">Open video</a>
+      </video>
+      <figcaption id="video-caption">Reconstruction of UR5 workpiece alignment using nominal robot parameters and an assumed tool mounting.</figcaption>
+    </figure>
+    <div>
+      <section>
+        <h2>Finding the workpiece</h2>
+        <p>The detector locates the part in the camera image. A segmentation model then separates it from the background so that feature matching can focus on the part itself.</p>
+      </section>
+      <section>
+        <h2>Using the image as feedback</h2>
+        <p>We compare features in the current image with those in a reference view. Their displacement gives the visual servo controller an error signal for moving the workpiece toward the desired alignment.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

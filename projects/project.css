@@ -1,0 +1,70 @@
+.project-intro {
+  padding-block: clamp(2rem, 5vw, 3.75rem);
+}
+.project-intro h1 {
+  max-width: 20ch;
+  margin-block: .5rem .95rem;
+  font-size: clamp(2.65rem, 6vw, 4.75rem);
+  line-height: 1.03;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+.project-intro .lead {
+  max-width: 64ch;
+  color: var(--secondary);
+  font-size: clamp(1.04rem, 2vw, 1.2rem);
+  line-height: 1.5;
+}
+.project-intro .authors {
+  margin-top: 1.2rem;
+  font-size: 1rem;
+}
+.project-intro .resources {
+  gap: 1.4rem;
+}
+.project-intro .resources a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  border: 0;
+  text-decoration: underline;
+}
+.study {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-block: clamp(2rem, 5vw, 3.75rem);
+}
+.study video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 3px;
+  background: var(--navy);
+}
+.study figcaption {
+  margin-top: .65rem;
+  font-size: .94rem;
+  color: var(--muted);
+}
+.study section + section {
+  border-top: 1px solid var(--rule);
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+}
+.study h2 {
+  margin-bottom: .45rem;
+  font-size: clamp(1.5rem, 2.7vw, 1.9rem);
+  line-height: 1.15;
+  letter-spacing: -.035em;
+}
+.study section p {
+  color: var(--secondary);
+}
+@media (max-width: 760px) {
+  .study {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DCM-TVDW coordinates stepping and body height to help a humanoid walk across a shaking platform.">
+  <title>Humanoid walking on moving terrain | Yan Luo</title>
+  <link rel="icon" href="../../assets/design/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../project.css">
+</head>
+<body>
+  <a class="skip" href="#study">Skip to the study</a>
+  <header class="mast">
+    <div class="wrap">
+      <nav class="topnav" aria-label="Site navigation">
+        <a class="signature" href="../../"><span class="seal" aria-hidden="true">yl</span> Yan Luo</a>
+        <div class="navlinks"><a href="../../#walking-publication">Selected publications</a></div>
+      </nav>
+      <div class="project-intro">
+        <p class="project-meta">Science China Technological Sciences · 2025</p>
+        <h1>Humanoid walking on moving terrain</h1>
+        <p class="lead">When a platform tilts as a foot lands, regaining balance can take several steps. Our DCM-TVDW controller adjusts where and when a humanoid steps, as well as how high it carries its body and swing foot.</p>
+        <p class="authors"><strong>Yan Luo</strong>, Chao Liu, Jianhua Wu, Zhenhua Xiong, and Han Ding</p>
+        <div class="resources"><a href="https://link.springer.com/article/10.1007/s11431-024-2872-7">Paper</a><a href="#video">Video</a></div>
+      </div>
+    </div>
+  </header>
+  <main class="study wrap" id="study">
+    <figure id="video">
+      <video controls playsinline preload="none" poster="../../assets/publications/dcm.webp" aria-label="Humanoid walking trials on moving terrain" aria-describedby="video-caption" src="../../assets/publications/dcm.mp4">
+        <a href="../../assets/publications/dcm.mp4">Open video</a>
+      </video>
+      <figcaption id="video-caption">Hardware trials show the robot adapting its gait as the support surface moves.</figcaption>
+    </figure>
+    <div>
+      <section>
+        <h2>Recovering over several steps</h2>
+        <p>The divergent component of motion (DCM) captures how the body moves away from a stable stance. We combine it with N-step capturability to plan a sequence of footholds that can bring the robot back into balance. A variable-height controller adapts the center of mass and foot clearance to changes in terrain.</p>
+      </section>
+      <section>
+        <h2>Walking on a shaking platform</h2>
+        <p>We tested the controller in simulation and on the SJ-Bruce robot. In the physical experiment, the robot crossed a moving platform whose inclination reached approximately 22°.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

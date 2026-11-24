@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TOVEP combines color, depth, and local plant structure to locate fruit picking points. Read the manuscript, explore the 3D scene, and access the four-crop evaluation set.">
+  <title>TOVEP | Yan Luo</title>
+  <link rel="icon" href="../../assets/design/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../project.css">
+</head>
+<body>
+  <a class="skip" href="#study">Skip to the study</a>
+  <header class="mast">
+    <div class="wrap">
+      <nav class="topnav" aria-label="Site navigation">
+        <a class="signature" href="../../"><span class="seal" aria-hidden="true">yl</span> Yan Luo</a>
+        <div class="navlinks"><a href="../../#tovep-publication">Selected publications</a></div>
+      </nav>
+      <div class="project-intro">
+        <p class="project-meta">Manuscript under review at <cite>Computers and Electronics in Agriculture</cite> · 2026</p>
+        <h1>TOVEP</h1>
+        <p class="lead">Where should a robot approach a fruit when leaves hide the stem? TOVEP uses color and depth to help a vision-language model find the fruit’s attachment point and propose a direction of approach.</p>
+        <p class="authors"><strong>Yan Luo</strong>, Zexi Bo, Ruonan Liu, Zhenhua Xiong, and Han Ding</p>
+        <div class="resources">
+          <a href="../../assets/publications/tovep.pdf">Paper</a>
+          <a href="#video">Video</a>
+          <a href="../../assets/publications/tovep-scene.html">3D scene</a>
+          <a href="https://github.com/luoyanai/TOVEP-RGBD-Harvest">Dataset</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="study wrap" id="study">
+    <figure id="video">
+      <video controls playsinline preload="none" poster="../../assets/publications/tovep.webp" aria-label="TOVEP picking-point localization" aria-describedby="video-caption" src="../../assets/publications/tovep.mp4">
+        <a href="../../assets/publications/tovep.mp4">Open video</a>
+      </video>
+      <figcaption id="video-caption">Picking-point localization across consecutive RGB-D views. The 3D scene lets you inspect the reconstruction interactively.</figcaption>
+    </figure>
+    <div>
+      <section>
+        <h2>Finding a fruit’s attachment point</h2>
+        <p>TOVEP refines the depth map, identifies structures around potential attachment points, and estimates which regions have reliable evidence. A vision-language model examines these candidate regions to select a picking point and approach direction. Depth and camera calibration place the point in the camera’s coordinate frame.</p>
+      </section>
+      <section>
+        <h2>Testing across four crops</h2>
+        <p>The public benchmark contains 220 expert-annotated RGB-D frames, with 55 each for mango, orange, pepper, and strawberry. We reserved these frames for final evaluation. Mean picking-point error was 29.2 pixels with TOVEP and 121.2 pixels when the vision-language model received only the color image.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

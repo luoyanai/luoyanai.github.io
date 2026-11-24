@@ -1,6 +1,5 @@
 exclude:
   - reference/inference.exe
-  - letters/
   - assets/references/
   - assets/profile/cv.pdf
   - files/Yan_Luo_Academic_CV.docx

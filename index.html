@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eaf5f8">
-  <meta name="description" content="Yan Luo studies real-to-sim-to-real learning through humanoid locomotion and recovery, workcell reconstruction, and task generation for robotic welding.">
+  <meta name="description" content="Yan Luo studies how visual and physical feedback shape robot behavior, from RGB-D perception for manipulation to humanoid locomotion and recovery.">
   <meta property="og:title" content="Yan Luo | Robot Learning">
-  <meta property="og:description" content="What should robots practice in simulation to perform better on hardware? Explore work on humanoid locomotion, simulated recovery, and robotic welding.">
+  <meta property="og:description" content="Yan Luo studies how visual and physical feedback shape robot behavior, from RGB-D perception for manipulation to humanoid locomotion and recovery.">
   <meta property="og:type" content="website">
   <title>Yan Luo | Robot Learning</title>
   <link rel="icon" href="assets/design/favicon.png" type="image/png">
@@ -20,15 +20,16 @@
       <nav class="topnav" aria-label="Main navigation">
         <a class="signature" href="#top"><span class="seal" aria-hidden="true">yl</span> Yan Luo</a>
         <div class="navlinks">
-          <a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#news">News</a><a href="#profile">Profile</a><a href="#contact">Contact</a>
+          <a href="#news">News</a><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#profile">Profile</a><a href="#letters">References</a><a href="#contact">Contact</a>
         </div>
       </nav>
       <div class="hero" id="about">
         <div class="hero-copy">
           <h1>Yan Luo</h1>
-          <p class="credential">Ph.D. in Mechanical Engineering · Shanghai Jiao Tong University</p>
-          <p class="question">What should robots practice in simulation to perform better on hardware?</p>
-          <p class="bio">I study real-to-sim-to-real learning through reconstructed workcells, generated welding tasks, and humanoid failures replayed in simulation. In MotionVL, we trained a walking policy with vision-language feedback and deployed it on a physical humanoid. I am exploring how generative world models could turn failures into new training scenarios.</p>
+          <p class="credential">I earned my Ph.D. in Mechanical Engineering at Shanghai Jiao Tong University in 2026, advised by Professors <a href="https://mse.hust.edu.cn/info/1142/1346.htm">Han Ding</a> and <a href="https://me.sjtu.edu.cn/en/FullTimeTeacher/xiongzhenhua.html">Zhenhua Xiong</a>.</p>
+          <p class="research-focus">I study how robots turn perception into action and learn from the outcome.</p>
+          <p class="bio">In <a href="#tovep-publication">TOVEP</a>, we use depth and local geometry to locate a picking point near the junction of a fruit and its stem. In <a href="#motionvl-publication">MotionVL</a>, a vision-language model critiques a simulated gait, and a language model translates that feedback into rewards for reinforcement learning. We deployed the resulting straight-leg walking policy on a physical humanoid.</p>
+          <p class="bio">I now reconstruct welding cells and vary the geometry of the seams a robot has to reach. In HomeSafe, I replay the same disturbance to compare how a humanoid recovers under different controllers. I’m exploring whether generative world models can turn one failed attempt into training scenarios that improve recovery on hardware.</p>
           <div class="hero-links"><a class="email" href="mailto:luoyan99@sjtu.edu.cn">Available now for postdoctoral positions</a></div>
         </div>
         <figure class="portrait"><img src="assets/profile/yan-luo.webp" width="400" height="500" alt="Yan Luo standing beside a lake"></figure>
@@ -37,6 +38,17 @@
   </header>
 
   <main>
+    <section class="section updates" id="news" aria-labelledby="news-title">
+      <div class="wrap">
+        <div class="section-title"><h2 id="news-title">News</h2></div>
+        <ol class="news-list">
+          <li><span class="news-date"><time datetime="2026">2026</time></span><p>Reviewer, IEEE International Conference on Robotics and Automation (ICRA).</p></li>
+          <li><span class="news-date"><time datetime="2026">2026</time></span><p>Reviewer, <cite>IEEE Robotics and Automation Letters</cite>.</p></li>
+          <li><span class="news-date"><time datetime="2026">2026</time></span><p>Outstanding Graduate, Shanghai Jiao Tong University.</p></li>
+        </ol>
+      </div>
+    </section>
+
     <section class="section" id="publications" aria-labelledby="publication-title">
       <div class="wrap">
         <div class="section-title"><h2 id="publication-title">Selected publications</h2></div>
@@ -47,18 +59,18 @@
               <h3><a href="https://ieeexplore.ieee.org/document/11419765">MotionVL: Vision-Language Supervision for Reinforcement Learning of Humanoid Motion</a></h3>
               <p class="authors"><strong>Yan Luo</strong>, Jianhua Wu, Zhenhua Xiong, and Han Ding</p>
               <p class="venue"><cite>IEEE Robotics and Automation Letters</cite> · 11(5), 5717–5724 · 2026 · IROS 2026 oral presentation</p>
-              <p class="summary">MotionVL converts critiques of motion videos into training rewards, enabling straight-knee walking on a physical humanoid.</p>
-              <div class="resources"><a href="https://ieeexplore.ieee.org/document/11419765">Paper</a><a data-film="MotionVL humanoid motion" href="assets/publications/motionvl.mp4">Watch motion demo &middot; 0:24</a></div>
+              <p class="summary">MotionVL uses descriptions of simulated motion to generate reward functions. We evaluated jumping, running, and single-leg balance in simulation and demonstrated straight-leg walking on hardware.</p>
+              <div class="resources"><a href="https://ieeexplore.ieee.org/document/11419765" aria-label="Paper for MotionVL">Paper</a><a data-film="MotionVL humanoid motion" href="assets/publications/motionvl.mp4" aria-label="Video for MotionVL">Video</a><a href="projects/motionvl/" aria-label="Project page for MotionVL">Project</a></div>
             </div>
           </article>
           <article class="entry" id="tovep-publication">
             <a class="media" data-film="TOVEP fruit picking-point localization" href="assets/publications/tovep.mp4" aria-label="Play TOVEP fruit picking-point localization"><img src="assets/publications/tovep.webp" width="480" height="270" loading="lazy" alt="Reconstruction and picking-point localization in an orchard"><span class="play" aria-hidden="true"></span></a>
             <div class="entry-copy">
-              <h3>TOVEP: Visual-Geometric Evidence Enhancement for VLM-Guided Fruit Picking-Point Localization</h3>
+              <h3><a href="assets/publications/tovep.pdf">TOVEP: Visual-Geometric Evidence Enhancement for VLM-Guided Fruit Picking-Point Localization</a></h3>
               <p class="authors"><strong>Yan Luo</strong>, Zexi Bo, Ruonan Liu, Zhenhua Xiong, and Han Ding</p>
               <p class="venue">Manuscript under review at <cite>Computers and Electronics in Agriculture</cite> · 2026</p>
               <p class="summary">Depth, structural support, and confidence cues from RGB-D images guide a vision-language model to fruit picking points across multiple crops without fine-tuning.</p>
-              <div class="resources"><a data-film="TOVEP fruit picking-point localization" href="assets/publications/tovep.mp4">Watch the research film &middot; 0:29</a> <a href="assets/publications/tovep-scene.html">Explore the 3D scene</a></div>
+              <div class="resources"><a href="assets/publications/tovep.pdf" aria-label="Paper for TOVEP">Paper</a><a data-film="TOVEP fruit picking-point localization" href="assets/publications/tovep.mp4" aria-label="Video for TOVEP">Video</a><a href="projects/tovep/" aria-label="Project page for TOVEP">Project</a><a href="assets/publications/tovep-scene.html" aria-label="Explore the TOVEP 3D scene">3D viewer</a></div>
             </div>
           </article>
           <article class="entry" id="walking-publication">
@@ -67,18 +79,18 @@
               <h3><a href="https://link.springer.com/article/10.1007/s11431-024-2872-7">DCM-Based Dynamic Stable Walking under Terrain-Induced Time-Varying Disturbances for Humanoid Robots</a></h3>
               <p class="authors"><strong>Yan Luo</strong>, Chao Liu, Jianhua Wu, Zhenhua Xiong, and Han Ding</p>
               <p class="venue"><cite>Science China Technological Sciences</cite> · 68(4), 1420301 · 2025</p>
-              <p class="summary">We tested how adjusting footholds, step timing, and center-of-mass height helps a humanoid maintain balance on moving platforms and uneven terrain.</p>
-              <div class="resources"><a href="https://link.springer.com/article/10.1007/s11431-024-2872-7">Paper</a><a data-film="DCM-TVDW hardware trials" href="assets/publications/dcm.mp4">Watch hardware trials &middot; 0:27</a></div>
+              <p class="summary">Our controller adjusts body height and plans balance recovery across several steps. The SJ-Bruce humanoid walked across a shaking platform that tilted to about 22°.</p>
+              <div class="resources"><a href="https://link.springer.com/article/10.1007/s11431-024-2872-7" aria-label="Paper for DCM-TVDW">Paper</a><a data-film="DCM-TVDW hardware trials" href="assets/publications/dcm.mp4" aria-label="Video for DCM-TVDW">Video</a><a href="projects/dcm-tvdw/" aria-label="Project page for DCM-TVDW">Project</a></div>
             </div>
           </article>
           <article class="entry" id="visual-servo-publication">
-            <a class="media" data-film="UR5 workpiece alignment" href="assets/publications/segmentation.mp4" aria-label="Play UR5 workpiece alignment"><img src="assets/publications/segmentation.webp" width="480" height="270" loading="lazy" alt="Robot aligning a stamped workpiece with a reference pose"><span class="play" aria-hidden="true"></span></a>
+            <a class="media" data-film="UR5 workpiece alignment reconstruction" href="assets/publications/segmentation.mp4" aria-label="Play UR5 workpiece alignment"><img src="assets/publications/segmentation.webp" width="480" height="270" loading="lazy" alt="Robot aligning a stamped workpiece with a reference pose"><span class="play" aria-hidden="true"></span></a>
             <div class="entry-copy">
               <h3><a href="assets/publications/segmentation.pdf">Image Foreground Segmentation Based on Small Data Set for Visual Servo Applications</a></h3>
               <p class="authors"><strong>Yan Luo</strong>, Gaoming Chen, Chao Liu, and Zhenhua Xiong</p>
               <p class="venue"><cite>IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)</cite> · pp. 715–720 · 2023</p>
               <p class="summary">With limited training images, our method combines object detection, foreground segmentation, and feature matching to provide feedback for visual servoing.</p>
-              <div class="resources"><a href="assets/publications/segmentation.pdf">Paper (PDF)</a><a data-film="UR5 workpiece alignment" title="UR5 reconstruction using nominal robot parameters and an assumed tool mounting" href="assets/publications/segmentation.mp4">Watch alignment demo &middot; 0:16</a></div>
+              <div class="resources"><a href="assets/publications/segmentation.pdf" aria-label="Paper for visual servoing">Paper</a><a data-film="UR5 workpiece alignment reconstruction" href="assets/publications/segmentation.mp4" aria-label="Video for visual servoing">Video</a><a href="projects/visual-servo/" aria-label="Project page for visual servoing">Project</a></div>
             </div>
           </article>
         </div>
@@ -95,7 +107,7 @@
               <h3>HomeSafe: Learning from humanoid failures</h3>
               <p class="project-meta">SAFE-RSI · Simulated recovery</p>
               <p class="summary">The same simulated floor disturbance toppled the baseline G1, while a protective controller kept it upright. I am studying how consequences for people, objects, and the robot can guide recursive self-improvement.</p>
-              <div class="resources"><a data-film="HomeSafe — humanoid recovery in a reconstructed room" href="assets/projects/homesafe.mp4">Simulation film · 1:22</a></div>
+              <div class="resources"><a data-film="HomeSafe — humanoid recovery in a reconstructed room" href="assets/projects/homesafe.mp4">Video</a></div>
             </div>
           </article>
           <article class="entry" id="welding-reconstruction">
@@ -104,7 +116,7 @@
               <h3>Reconstructing a welding cell for robot simulation</h3>
               <p class="project-meta">Real-to-sim reconstruction</p>
               <p class="summary">I reconstructed the welding arm, fixture, and workpiece in a shared scene. The films show the layout of the cell and a close view of the torch following the joint.</p>
-              <div class="resources"><a data-film="Welding workcell reconstruction" href="assets/projects/reconstruction.mp4">Reconstruction · 0:34</a><a data-film="Welding sequence — torch and workpiece" data-poster="assets/projects/welding.jpg" href="assets/projects/welding.mp4">Welding sequence · 0:53</a></div>
+              <div class="resources"><a data-film="Welding workcell reconstruction" href="assets/projects/reconstruction.mp4">Workcell video</a><a data-film="Welding sequence — torch and workpiece" data-poster="assets/projects/welding.jpg" href="assets/projects/welding.mp4">Torch video</a></div>
             </div>
           </article>
           <article class="entry" id="generative-workpieces">
@@ -113,7 +125,7 @@
               <h3>Generating workpieces and their welding processes</h3>
               <p class="project-meta">Task generation</p>
               <p class="summary">I generate each workpiece together with its welding process. Plate assemblies and pipe branches yield different joint geometries for studying policy generalization.</p>
-              <div class="resources"><a data-film="Generating workpieces and welding processes" href="assets/projects/generative-workpiece.mp4">Generation film · 1:04</a></div>
+              <div class="resources"><a data-film="Generating workpieces and welding processes" href="assets/projects/generative-workpiece.mp4">Video</a></div>
             </div>
           </article>
           <article class="entry" id="quadruped-welding">
@@ -122,7 +134,7 @@
               <h3>Training a quadruped manipulator for welding</h3>
               <p class="project-meta">Policy training · Isaac Sim</p>
               <p class="summary">I train a quadruped carrying a welding arm to position its base and bring the torch to a joint inside a confined simulated workcell.</p>
-              <div class="resources"><a data-film="Quadruped welding — simulated policy training" href="assets/projects/quadruped-welding.mp4">Training film · 1:13</a></div>
+              <div class="resources"><a data-film="Quadruped welding — simulated policy training" href="assets/projects/quadruped-welding.mp4">Video</a></div>
             </div>
           </article>
           <article class="entry" id="outdoor-fruit-picking">
@@ -131,7 +143,7 @@
               <h3>Outdoor Humanoid Fruit Picking</h3>
               <p class="project-meta">Real robot</p>
               <p class="summary">Outdoor humanoid fruit picking combining target localization, reaching, and coordinated body motion in a tree-canopy environment.</p>
-              <div class="resources"><a data-film="Outdoor Humanoid Fruit Picking" href="assets/projects/outdoor-fruit-picking.mp4">Demonstration · 0:22</a></div>
+              <div class="resources"><a data-film="Outdoor Humanoid Fruit Picking" href="assets/projects/outdoor-fruit-picking.mp4">Video</a></div>
             </div>
           </article>
           <article class="entry" id="retail-picking">
@@ -140,7 +152,7 @@
               <h3>Real-World Retail Picking</h3>
               <p class="project-meta">Real robot</p>
               <p class="summary">Real-robot retail picking integrating target grounding, reach-aware planning, and collision-conscious motion for multi-stage manipulation around shelves, doors, and counters.</p>
-              <div class="resources"><a data-film="Real-World Retail Picking" href="assets/projects/retail-picking.mp4">Demonstration · 0:19</a></div>
+              <div class="resources"><a data-film="Real-World Retail Picking" href="assets/projects/retail-picking.mp4">Video</a></div>
             </div>
           </article>
           <article class="entry" id="beverage-serving">
@@ -149,7 +161,7 @@
               <h3>Language-Guided Beverage Serving</h3>
               <p class="project-meta">Real robot</p>
               <p class="summary">Language-guided tabletop manipulation integrating object grounding, grasp sequencing, and controlled pouring to execute a coordinated beverage-serving task.</p>
-              <div class="resources"><a data-film="Language-Guided Beverage Serving" href="assets/projects/beverage-serving.mp4">Demonstration · 0:11</a></div>
+              <div class="resources"><a data-film="Language-Guided Beverage Serving" href="assets/projects/beverage-serving.mp4">Video</a></div>
             </div>
           </article>
           <article class="entry" id="teleoperation">
@@ -158,7 +170,7 @@
               <h3>Whole-Body Humanoid Teleoperation</h3>
               <p class="project-meta">Real robot · Teleoperation</p>
               <p class="summary">VR teleoperation maps human upper-body and hand motion to a humanoid platform, supporting demonstration collection for imitation learning and policy development.</p>
-              <div class="resources"><a data-film="Whole-Body Humanoid Teleoperation" href="assets/projects/teleoperation.mp4">Demonstration · 0:10</a></div>
+              <div class="resources"><a data-film="Whole-Body Humanoid Teleoperation" href="assets/projects/teleoperation.mp4">Video</a></div>
             </div>
           </article>
           <article class="entry" id="disturbance-walking">
@@ -167,7 +179,7 @@
               <h3>Disturbance-Resilient Humanoid Walking</h3>
               <p class="project-meta">Real robot</p>
               <p class="summary">Humanoid walking on a shaking and tilting support surface, combining foot-placement adjustment, center-of-mass regulation, and body stabilization to maintain balance under changing terrain conditions.</p>
-              <div class="resources"><a data-film="Disturbance-Resilient Humanoid Walking" href="assets/projects/disturbance-walking.mp4">Demonstration · 0:19</a></div>
+              <div class="resources"><a data-film="Disturbance-Resilient Humanoid Walking" href="assets/projects/disturbance-walking.mp4">Video</a></div>
             </div>
           </article>
           <article class="entry" id="retail-simulation">
@@ -176,7 +188,7 @@
               <h3>Retail Manipulation in Simulation</h3>
               <p class="project-meta">Simulation</p>
               <p class="summary">A repeatable retail simulation for evaluating perception, target selection, grasp planning, and placement before real-robot deployment.</p>
-              <div class="resources"><a data-film="Retail Manipulation in Simulation" href="assets/projects/retail-simulation.mp4">Demonstration · 0:45</a></div>
+              <div class="resources"><a data-film="Retail Manipulation in Simulation" href="assets/projects/retail-simulation.mp4">Video</a></div>
             </div>
           </article>
           <article class="entry" id="smart-factory">
@@ -185,7 +197,7 @@
               <h3>Digital Twin Smart-Factory with Embodied Robots</h3>
               <p class="project-meta">Simulation</p>
               <p class="summary">A digital-twin factory simulation integrating scene understanding, task allocation, and multi-robot coordination within a shared production workflow.</p>
-              <div class="resources"><a data-film="Digital Twin Smart-Factory with Embodied Robots" href="assets/projects/smart-factory.mp4">Demonstration · 0:13</a></div>
+              <div class="resources"><a data-film="Digital Twin Smart-Factory with Embodied Robots" href="assets/projects/smart-factory.mp4">Video</a></div>
             </div>
           </article>
           <article class="entry" id="piano-media">
@@ -194,21 +206,10 @@
               <h3>Humanoid Piano Performance and Media Coverage</h3>
               <p class="project-meta">Real robot · Media coverage</p>
               <p class="summary">Humanoid piano playing combining coordinated hand and upper-body motion, presented with media coverage of the demonstration.</p>
-              <div class="resources"><a data-film="Humanoid Piano Performance and Media Coverage" href="assets/projects/piano-media.mp4">Demonstration · 0:18</a></div>
+              <div class="resources"><a data-film="Humanoid Piano Performance and Media Coverage" href="assets/projects/piano-media.mp4">Video</a></div>
             </div>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section updates" id="news" aria-labelledby="news-title">
-      <div class="wrap">
-        <div class="section-title"><h2 id="news-title">News</h2></div>
-        <ol class="news-list">
-          <li><span class="news-date"><time datetime="2026">2026</time></span><p>Reviewer, IEEE International Conference on Robotics and Automation (ICRA).</p></li>
-          <li><span class="news-date"><time datetime="2026">2026</time></span><p>Reviewer, <cite>IEEE Robotics and Automation Letters</cite>.</p></li>
-          <li><span class="news-date"><time datetime="2026">2026</time></span><p>Outstanding Graduate, Shanghai Jiao Tong University.</p></li>
-        </ol>
       </div>
     </section>
 
@@ -222,6 +223,33 @@
       </div>
     </section>
 
+    <section class="section recommendations" id="letters" aria-labelledby="letters-title">
+      <div class="wrap">
+        <div class="section-title"><h2 id="letters-title">Academic references</h2></div>
+        <ul class="letters-list">
+          <li>
+            <img src="images/zjw-420.webp" width="112" height="128" alt="" loading="lazy" decoding="async">
+            <div class="referee"><h3>Jianwei Zhang</h3><p>University of Hamburg</p></div>
+            <a href="letters/jianwei-zhang-letter.pdf" aria-label="Recommendation letter from Jianwei Zhang (PDF)">Letter (PDF)</a>
+          </li>
+          <li>
+            <img src="images/hw-420.webp" width="112" height="128" alt="" loading="lazy" decoding="async">
+            <div class="referee"><h3>Wei Hong</h3><p>Southeast University</p></div>
+            <a href="letters/wei-hong-letter.pdf" aria-label="Recommendation letter from Wei Hong (PDF)">Letter (PDF)</a>
+          </li>
+          <li>
+            <img src="images/xzh-420.webp" width="112" height="128" alt="" loading="lazy" decoding="async">
+            <div class="referee"><h3>Zhenhua Xiong</h3><p>Shanghai Jiao Tong University</p></div>
+            <a href="letters/zhenhua-xiong-letter.pdf" aria-label="Recommendation letter from Zhenhua Xiong (PDF)">Letter (PDF)</a>
+          </li>
+          <li>
+            <img src="images/ky-420.webp" width="112" height="128" alt="" loading="lazy" decoding="async">
+            <div class="referee"><h3>Yu Kang</h3><p>University of Science and Technology of China</p></div>
+            <a href="letters/yu-kang-letter.pdf" aria-label="Recommendation letter from Yu Kang (PDF)">Letter (PDF)</a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer class="closing" id="contact">

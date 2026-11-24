@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eaf5f8">
-  <meta name="description" content="Yan Luo studies how visual and physical feedback shape robot behavior, from RGB-D perception for manipulation to humanoid locomotion and recovery.">
+  <meta name="description" content="Yan Luo studies real-to-sim-to-real learning for robot planning and control, and how generative world models could turn failures into new training scenarios.">
   <meta property="og:title" content="Yan Luo | Robot Learning">
-  <meta property="og:description" content="Yan Luo studies how visual and physical feedback shape robot behavior, from RGB-D perception for manipulation to humanoid locomotion and recovery.">
+  <meta property="og:description" content="Yan Luo studies real-to-sim-to-real learning for robot planning and control, and how generative world models could turn failures into new training scenarios.">
   <meta property="og:type" content="website">
   <title>Yan Luo | Robot Learning</title>
   <link rel="icon" href="assets/design/favicon.png" type="image/png">
@@ -26,11 +26,11 @@
       <div class="hero" id="about">
         <div class="hero-copy">
           <h1>Yan Luo</h1>
-          <p class="credential">I earned my Ph.D. in Mechanical Engineering at Shanghai Jiao Tong University in 2026, advised by Professors <a href="https://mse.hust.edu.cn/info/1142/1346.htm">Han Ding</a> and <a href="https://me.sjtu.edu.cn/en/FullTimeTeacher/xiongzhenhua.html">Zhenhua Xiong</a>.</p>
-          <p class="research-focus">I study how robots turn perception into action and learn from the outcome.</p>
-          <p class="bio">In <a href="#tovep-publication">TOVEP</a>, we use depth and local geometry to locate a picking point near the junction of a fruit and its stem. In <a href="#motionvl-publication">MotionVL</a>, a vision-language model critiques a simulated gait, and a language model translates that feedback into rewards for reinforcement learning. We deployed the resulting straight-leg walking policy on a physical humanoid.</p>
-          <p class="bio">I now reconstruct welding cells and vary the geometry of the seams a robot has to reach. In HomeSafe, I replay the same disturbance to compare how a humanoid recovers under different controllers. I’m exploring whether generative world models can turn one failed attempt into training scenarios that improve recovery on hardware.</p>
-          <div class="hero-links"><a class="email" href="mailto:luoyan99@sjtu.edu.cn">Available now for postdoctoral positions</a></div>
+          <p class="credential">I earned my Ph.D. in Mechanical Engineering at Shanghai Jiao Tong University in 2026. My advisors were <a href="https://mse.hust.edu.cn/info/1142/1346.htm">Han Ding</a> (Member of the Chinese Academy of Sciences) and <a href="https://me.sjtu.edu.cn/en/FullTimeTeacher/xiongzhenhua.html">Zhenhua Xiong</a> (Professor at Shanghai Jiao Tong University).</p>
+          <p class="research-focus">I study how robots can use physical experience to plan and control motion in unfamiliar conditions.</p>
+          <p class="bio">I use a real-to-sim-to-real approach to manipulation and locomotion. I reconstruct environments from sensor observations, then vary task geometry and disturbances in simulation to evaluate motion plans and train control policies. Hardware trials show which behaviors transfer and where simulated and measured motions diverge.</p>
+          <p class="bio">My current focus is recursive self-improvement (RSI). When a policy fails on hardware, what should the robot practice next? I’m exploring whether generative world models can recreate the conditions around a failure and vary them systematically. Those variations could reveal why a policy breaks down and guide the next round of training and hardware evaluation.</p>
+          <div class="hero-links"><a class="primary-link" href="assets/profile/cv.pdf" aria-label="CV (PDF)">CV</a></div>
         </div>
         <figure class="portrait"><img src="assets/profile/yan-luo.webp" width="400" height="500" alt="Yan Luo standing beside a lake"></figure>
       </div>
